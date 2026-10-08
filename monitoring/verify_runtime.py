@@ -3,6 +3,18 @@ import time
 import os
 import sys
 
+def find_terminal_dir():
+    if "MT5_DATA_PATH" in os.environ:
+        return os.environ["MT5_DATA_PATH"]
+    base = os.path.join(os.environ.get("APPDATA", ""), "MetaQuotes", "Terminal")
+    if os.path.exists(base):
+        for item in os.listdir(base):
+            candidate = os.path.join(base, item)
+            if os.path.isdir(candidate) and (os.path.exists(os.path.join(candidate, "origin.txt")) or os.path.exists(os.path.join(candidate, "MQL5"))):
+                return candidate
+    return os.path.join(base, "Default")
+
+TERM_DIR = find_terminal_dir()
 config = os.environ.get("MT5_STARTUP_INI", os.path.join(TERM_DIR, "config", "startup.ini"))
 exe = r"C:\Program Files\MetaTrader 5 EXNESS\terminal64.exe"
 log_dir = os.environ.get("MT5_LOG_DIR", os.path.join(TERM_DIR, "MQL5", "Logs"))

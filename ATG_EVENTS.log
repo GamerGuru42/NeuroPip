@@ -1,0 +1,17 @@
+[2026-10-08 13:00:00] [AUDIT] Phase G initialized. Checking repository integrity and invariants.
+[2026-10-08 13:02:15] [AUDIT] Spread threshold discrepancy audited: Strategy qualification = 35 pts, Trade planning max tolerance = 40 pts. Both identical to Phase C/E baseline.
+[2026-10-08 13:05:40] [DISCOVERY] Active MT5 PID detected: 21960. Server: Exness-MT5Trial9. Account: 477430016 (DEMO).
+[2026-10-08 13:13:00] [MIGRATION] Staging NeuroPip_EA source to MQL5\Experts\NeuroPip.
+[2026-10-08 13:14:05] [BUILD] MetaEditor compilation of NeuroPip_EA.mq5: 0 errors, 0 warnings (7950 ms).
+[2026-10-08 13:15:20] [BUILD] MetaEditor compilation of RunPhase10TestsScript.mq5: 0 errors, 0 warnings (5064 ms).
+[2026-10-08 13:16:05] [DEPLOY] Stopping legacy instance PID 21960 for controlled switch to NeuroPip_EA.
+[2026-10-08 13:16:15] [DEPLOY] Launching MT5 with NeuroPip_EA attached to BTCUSDm M1 via Task Scheduler Launch_MT5_ATG.
+[2026-10-08 13:16:19] [RUNTIME] MT5 started successfully with PID 14664.
+[2026-10-08 13:16:20] [EXPERT] Expert NeuroPip_EA (BTCUSDm,M1) loaded successfully.
+[2026-10-08 13:16:21] [TEST] Internal test suites Phase 3 through Phase 10 executed inside OnInit(): 161/161 tests passed (100%).
+[2026-10-08 13:16:22] [PIPELINE] Dry-run execution test completed: Request #1 EURUSDm preflight OrderCheck code 10027, ExecutionGuard blocked broker submission (ATG_REJECT_EXECUTION_DISABLED).
+[2026-10-08 13:16:22] [INIT] NeuroPip initialized successfully in Phase 10 MONITOR_ONLY mode.
+[2026-10-08 13:16:30] [MARKET] MarketDataEngine initialized: 5/5 symbols healthy (EURUSDm, USDJPYm, XAUUSDm, BTCUSDm, ETHUSDm).
+[2026-10-08 13:20:00] [SUPERVISOR] Heartbeat streaming verified: 5/5 symbols active, log age < 5s.
+[2026-10-08 13:25:00] [EVIDENCE] Genuine forward evidence tracking cohort COHORT_01 active. Current genuine forward N = 0.
+[2026-10-08 13:30:00] [STATUS] Active monitoring confirmed. Safety invariants verified: can_trade=false, MONITOR_ONLY=true, FP-B741A5209E579706.

@@ -5,7 +5,18 @@ import time
 import shutil
 import subprocess
 
-TERM_DIR = os.environ.get("MT5_DATA_PATH", os.path.join(os.environ.get("APPDATA", ""), "MetaQuotes", "Terminal", "Default"))
+def find_terminal_dir():
+    if "MT5_DATA_PATH" in os.environ:
+        return os.environ["MT5_DATA_PATH"]
+    base = os.path.join(os.environ.get("APPDATA", ""), "MetaQuotes", "Terminal")
+    if os.path.exists(base):
+        for item in os.listdir(base):
+            candidate = os.path.join(base, item)
+            if os.path.isdir(candidate) and (os.path.exists(os.path.join(candidate, "origin.txt")) or os.path.exists(os.path.join(candidate, "MQL5"))):
+                return candidate
+    return os.path.join(base, "Default")
+
+TERM_DIR = find_terminal_dir()
 EXE = os.environ.get("MT5_EXE_PATH", r"C:\Program Files\MetaTrader 5 EXNESS\terminal64.exe")
 CONFIG = os.path.join(TERM_DIR, "config", "startup.ini")
 DEFAULT_PROFILE = os.path.join(TERM_DIR, "MQL5", "Profiles", "Charts", "Default")
