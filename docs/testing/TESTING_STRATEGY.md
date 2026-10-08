@@ -1,4 +1,4 @@
-# ATG Trading Engine - Testing Strategy
+# NeuroPip - Testing Strategy
 
 ## 1. Research & Validation Pipeline
 No strategy or logic update reaches live deployment without passing:

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| ExecutionGuard.mqh                                               |
-//| ATG Trading Engine - Phase 2A                                   |
+//| NeuroPip - Phase 2A                                   |
 //| Execution Safety Gate                                            |
 //|                                                                  |
 //| Phase 2A does NOT execute trades.                                |

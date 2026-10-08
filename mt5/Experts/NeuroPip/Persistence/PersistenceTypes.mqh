@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| PersistenceTypes.mqh                                             |
-//| ATG Trading Engine - Phase 7                                      |
+//| NeuroPip - Phase 7                                      |
 //| Persistent Storage, Audit Trail & Historical Analytics Contracts |
 //| MONITOR_ONLY - No execution capability                            |
 //+------------------------------------------------------------------+

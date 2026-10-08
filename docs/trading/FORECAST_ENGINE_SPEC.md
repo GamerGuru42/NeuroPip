@@ -1,4 +1,4 @@
-# ATG Trading Engine - Forecast Engine Spec
+# NeuroPip - Forecast Engine Spec
 
 ## 1. Purpose
 The Forecast Engine is responsible for generating a structured, objective assessment of the market. It does not generate trade signals; it provides the probabilistic context that the Strategy Engine consumes.

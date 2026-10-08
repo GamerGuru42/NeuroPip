@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| EvaluationTypes.mqh                                              |
-//| ATG Trading Engine - Phase 8                                     |
+//| NeuroPip - Phase 8                                     |
 //| Extended Paper Validation & Statistical Evaluation Types         |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+
@@ -581,7 +581,7 @@ struct SPhase8EvaluationResult
    void Reset()
    {
       generated_time       = 0;
-      strategy_name        = "ATG_TREND_CONTINUATION";
+      strategy_name        = "NEUROPIP_TREND_CONTINUATION";
       dataset_report.Reset();
 
       ResetCorePerformance();

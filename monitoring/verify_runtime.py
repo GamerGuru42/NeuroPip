@@ -23,7 +23,7 @@ today_str = time.strftime("%Y%m%d")
 log_path = os.path.join(log_dir, f"{today_str}.log")
 last_pos = os.path.getsize(log_path) if os.path.exists(log_path) else 0
 
-print("=== ATG Trading Engine - Runtime Verification ===")
+print("=== NeuroPip - Runtime Verification ===")
 initial_pids = get_running_mt5_pids()
 print(f"MT5 PID before launch/verification: {initial_pids if initial_pids else 'None'}")
 

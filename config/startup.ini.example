@@ -9,6 +9,6 @@
 ; ==============================================================================
 
 [StartUp]
-Expert=NeuroPip\NeuroPip
+Expert=NeuroPip\NeuroPip_EA
 Symbol=BTCUSDm
 Period=M1

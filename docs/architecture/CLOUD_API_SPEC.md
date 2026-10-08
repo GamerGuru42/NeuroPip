@@ -1,4 +1,4 @@
-# ATG Trading Engine - Cloud API Spec
+# NeuroPip - Cloud API Spec
 
 ## 1. Role of the Cloud
 ATG Cloud handles telemetry, analytics, license validation, and user configuration. It is never part of the synchronous trade execution loop.

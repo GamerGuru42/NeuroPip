@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| SymbolUniverseManager.mqh                                       |
-//| ATG Trading Engine - Phase 1                                    |
+//| NeuroPip - Phase 1                                    |
 //|                                                                  |
 //| Resolves configured symbols to the actual broker symbols.       |
 //| Example:                                                        |

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| ExecutionTypes.mqh                                               |
-//| ATG Trading Engine                                               |
+//| NeuroPip                                               |
 //| Legacy redirect to canonical TradeTypes.mqh                      |
 //+------------------------------------------------------------------+
 #ifndef ATG_EXECUTION_TYPES_MQH

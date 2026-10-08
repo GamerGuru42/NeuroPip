@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| Phase10Tests.mqh                                                 |
-//| ATG Trading Engine - Phase 10                                    |
+//| NeuroPip - Phase 10                                    |
 //| Forward Evidence Accumulation, Monitoring & Validation Suite     |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+
@@ -57,7 +57,7 @@ private:
       t.Reset();
       t.paper_trade_id       = id;
       t.source_plan_id       = id + 1000;
-      t.strategy_id          = "ATG_TREND_CONTINUATION";
+      t.strategy_id          = "NEUROPIP_TREND_CONTINUATION";
       t.symbol               = symbol;
       t.direction            = dir;
       t.primary_timeframe    = PERIOD_M15;
@@ -153,7 +153,7 @@ public:
       if(t.risk_money <= 0.0) return false;
       if(t.net_pnl != 10.0) return false;
       if(t.realized_r <= 0.0) return false;
-      if(t.strategy_id != "ATG_TREND_CONTINUATION") return false;
+      if(t.strategy_id != "NEUROPIP_TREND_CONTINUATION") return false;
       if(t.config_fingerprint != "FP-TEST12345678") return false;
       if(t.regime != REGIME_TRENDING_BULLISH) return false;
       if(t.strategy_confidence != 0.88) return false;

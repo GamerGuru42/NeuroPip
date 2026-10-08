@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| Phase4Tests.mqh                                                  |
-//| ATG Trading Engine - Phase 4                                     |
+//| NeuroPip - Phase 4                                     |
 //| Strategy Decision Engine & Signal Validation Test Suite          |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+

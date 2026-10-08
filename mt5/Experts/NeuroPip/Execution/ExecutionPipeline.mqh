@@ -13,7 +13,7 @@
 //     → Execution Guard
 //     → STOP (REJECTED while can_trade == false)
 //
-#property copyright "ATG"
+#property copyright "NextGen Technologies"
 #property link      ""
 
 #include "ExecutionTypes.mqh"

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| OrderCheckEngine.mqh                                             |
-//| ATG Trading Engine - Phase 2C                                    |
+//| NeuroPip - Phase 2C                                    |
 //| Broker Order Preflight / Dry-Run Validation                      |
 //|                                                                  |
 //| IMPORTANT:                                                       |

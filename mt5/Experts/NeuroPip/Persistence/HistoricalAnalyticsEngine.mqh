@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| HistoricalAnalyticsEngine.mqh                                    |
-//| ATG Trading Engine - Phase 7                                      |
+//| NeuroPip - Phase 7                                      |
 //| Historical Performance Analytics & Time-Period Aggregation Engine|
 //| MONITOR_ONLY - No execution capability                            |
 //+------------------------------------------------------------------+

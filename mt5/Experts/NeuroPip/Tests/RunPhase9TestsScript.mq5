@@ -1,9 +1,9 @@
 //+------------------------------------------------------------------+
 //| RunPhase9TestsScript.mq5                                         |
-//| ATG Trading Engine - Standalone Phase 9 Test Runner Script       |
+//| NeuroPip - Standalone Phase 9 Test Runner Script       |
 //| Forward Paper Validation & Evidence Collection Test Runner       |
 //+------------------------------------------------------------------+
-#property copyright "ATG"
+#property copyright "NextGen Technologies"
 #property link      ""
 #property version   "1.00"
 
@@ -19,7 +19,7 @@
 void OnStart()
 {
    CLogger logger(LOG_LEVEL_NOTICE);
-   Print("=== RUNNING ATG ENGINE PHASE 3-9 TEST SUITES ===");
+   Print("=== RUNNING NEUROPIP ENGINE PHASE 3-9 TEST SUITES ===");
 
    // Wait up to 10s for terminal to establish broker connection
    int attempts = 0;

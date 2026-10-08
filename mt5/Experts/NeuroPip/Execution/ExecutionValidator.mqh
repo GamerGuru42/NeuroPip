@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| ExecutionValidator.mqh                                          |
-//| ATG Trading Engine - Phase 2B                                   |
+//| NeuroPip - Phase 2B                                   |
 //| Pre-Execution Validation                                        |
 //|                                                                  |
 //| This module performs validation only.                           |

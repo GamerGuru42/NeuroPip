@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| RiskEngine.mqh                                                   |
-//| ATG Trading Engine - Phase 2E                                   |
+//| NeuroPip - Phase 2E                                   |
 //| Canonical Location: Execution/RiskEngine.mqh                     |
 //|                                                                  |
 //| Risk Management Engine                                           |

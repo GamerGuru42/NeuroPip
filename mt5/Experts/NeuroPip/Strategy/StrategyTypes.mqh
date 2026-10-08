@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| StrategyTypes.mqh                                                |
-//| ATG Trading Engine - Phase 4                                     |
+//| NeuroPip - Phase 4                                     |
 //| Strategy Decision Engine Types, Enums and Data Contract           |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+
@@ -75,7 +75,7 @@ struct SStrategyParameters
 
    void Reset()
    {
-      strategy_id             = "ATG_TREND_CONTINUATION";
+      strategy_id             = "NEUROPIP_TREND_CONTINUATION";
       strategy_version        = "1.0.0";
       min_confidence          = 0.75;
       min_confluence          = 0.70;
@@ -173,7 +173,7 @@ struct SStrategyDecision
       primary_timeframe  = PERIOD_CURRENT;
       direction          = SIGNAL_DIR_NONE;
       status             = STRATEGY_WAIT;
-      strategy_id        = "ATG_TREND_CONTINUATION";
+      strategy_id        = "NEUROPIP_TREND_CONTINUATION";
       strategy_version   = "1.0.0";
       confidence         = 0.0;
       quality_score      = 0.0;

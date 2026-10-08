@@ -1,4 +1,4 @@
-# ATG Trading Engine - Strategy & Signal Engine Spec
+# NeuroPip - Strategy & Signal Engine Spec
 
 ## 1. Strategy Engine
 The Strategy Engine evaluates specific, testable edge-cases in the market. Each strategy must explicitly declare the Market Regimes under which it is permitted to operate.

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| StatisticalEvaluationEngine.mqh                                  |
-//| ATG Trading Engine - Phase 8                                     |
+//| NeuroPip - Phase 8                                     |
 //| Extended Paper Validation & Statistical Evaluation Engine        |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+

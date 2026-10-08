@@ -1,8 +1,8 @@
 //+------------------------------------------------------------------+
 //| Config.mqh                                                        |
-//| ATG Trading Engine - Phase 5 Configuration                        |
+//| NeuroPip - Phase 5 Configuration                        |
 //+------------------------------------------------------------------+
-#property copyright "ATG"
+#property copyright "NextGen Technologies"
 #property link      ""
 
 //+------------------------------------------------------------------+

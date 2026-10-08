@@ -1,4 +1,4 @@
-# ATG Trading Engine - Risk Specification
+# NeuroPip - Risk Specification
 
 ## 1. Core Risk Controls
 The Risk Engine operates locally and unconditionally evaluates every trade candidate and open portfolio state.

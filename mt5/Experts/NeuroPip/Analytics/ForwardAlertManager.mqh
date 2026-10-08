@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| ForwardAlertManager.mqh                                          |
-//| ATG Trading Engine - Phase 10                                    |
+//| NeuroPip - Phase 10                                    |
 //| Forward Monitoring Diagnostic Alert Dispatcher                   |
 //| DIAGNOSTICS/ALERTS ONLY - No automatic strategy modifications    |
 //+------------------------------------------------------------------+

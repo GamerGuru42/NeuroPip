@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| SignalTypes.mqh                                                  |
-//| ATG Trading Engine - Phase 3                                     |
+//| NeuroPip - Phase 3                                     |
 //| Signal Foundation Types, Enums and Candidate Contract            |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+

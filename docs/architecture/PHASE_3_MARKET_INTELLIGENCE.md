@@ -1,8 +1,8 @@
-# ATG Trading Engine — Phase 3: Market Intelligence & Signal Foundation
+# NeuroPip — Phase 3: Market Intelligence & Signal Foundation
 
 ## 1. Executive Summary
 
-Phase 3 introduces the **Market Intelligence & Signal Foundation** layer to the ATG Trading Engine. Its objective is to observe, measure, classify, and describe multi-timeframe market conditions without opening or managing live trading positions.
+Phase 3 introduces the **Market Intelligence & Signal Foundation** layer to the NeuroPip. Its objective is to observe, measure, classify, and describe multi-timeframe market conditions without opening or managing live trading positions.
 
 Phase 3 is strictly **MONITOR_ONLY**. It produces structured market features, multi-dimensional regime classifications, and candidate trade signals only (`SIGNAL_STATUS_CANDIDATE_ONLY`). Execution capabilities remain permanently hard-locked (`CCapabilities::can_trade == false`).
 

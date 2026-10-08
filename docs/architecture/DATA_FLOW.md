@@ -1,4 +1,4 @@
-# ATG Trading Engine - Data Flow
+# NeuroPip - Data Flow
 
 ## 1. Local Execution Hot Path
 The trade decision process is entirely local and synchronous. It must **never** block waiting for a WebRequest or cloud decision.

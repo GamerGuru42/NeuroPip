@@ -3,7 +3,7 @@
 // Records the complete audit trail of a trade intent as it flows through the
 // execution pipeline. This is an audit/reconciliation structure, NOT a live
 // execution system.
-#property copyright "ATG"
+#property copyright "NextGen Technologies"
 #property link      ""
 
 #include "ExecutionTypes.mqh"

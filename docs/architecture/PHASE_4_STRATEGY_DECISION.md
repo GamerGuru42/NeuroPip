@@ -1,8 +1,8 @@
-# ATG Trading Engine — Phase 4: Strategy Decision Engine & Signal Validation
+# NeuroPip — Phase 4: Strategy Decision Engine & Signal Validation
 
 ## 1. Executive Summary
 
-Phase 4 implements the **Strategy Decision Engine & Signal Validation** layer for the ATG Trading Engine. Siting directly above the Phase 3 Market Intelligence layer, Phase 4 transforms descriptive market conditions into a disciplined, rule-based strategy qualification framework.
+Phase 4 implements the **Strategy Decision Engine & Signal Validation** layer for the NeuroPip. Siting directly above the Phase 3 Market Intelligence layer, Phase 4 transforms descriptive market conditions into a disciplined, rule-based strategy qualification framework.
 
 Phase 4 answers the core question:
 > *"Given the current multi-timeframe market state, regime classification, and confluence evidence, is this a sufficiently strong, coherent, and qualified trade opportunity?"*
@@ -35,7 +35,7 @@ SIGNAL FOUNDATION (Phase 3)
        │ (Confluence scoring, evidence collection, conflict analysis, bias vs candidate)
        ▼
 STRATEGY DECISION ENGINE (Phase 4)
-       │ [ATG_TREND_CONTINUATION]
+       │ [NEUROPIP_TREND_CONTINUATION]
        │ (Deconstructed scoring, multi-timeframe hierarchy, duplicate control)
        ▼
 SIGNAL VALIDATION (Phase 4)
@@ -62,7 +62,7 @@ The decision layer operates via the `SStrategyDecision` data contract:
 | `primary_timeframe` | `ENUM_TIMEFRAMES` | Base execution timeframe (`PERIOD_M15`) |
 | `direction` | `ENUM_ATG_SIGNAL_DIRECTION` | `SIGNAL_DIR_BUY`, `SIGNAL_DIR_SELL`, or `SIGNAL_DIR_NONE` |
 | `status` | `ENUM_STRATEGY_DECISION_STATUS` | `STRATEGY_WAIT`, `STRATEGY_CANDIDATE`, `STRATEGY_APPROVED`, `STRATEGY_REJECTED` |
-| `strategy_id` | `string` | Unique strategy identifier (`"ATG_TREND_CONTINUATION"`) |
+| `strategy_id` | `string` | Unique strategy identifier (`"NEUROPIP_TREND_CONTINUATION"`) |
 | `strategy_version` | `string` | Semantic strategy version (`"1.0.0"`) |
 | `confidence` | `double` | Statistical confluence from intelligence layer ($0.0$ to $1.0$) |
 | `quality_score` | `double` | Deconstructed composite score ($0.0$ to $1.0$) |
@@ -164,7 +164,7 @@ $$\text{Composite Score} = \left( \sum W_i \cdot S_i \right) - \text{Conflict Pe
 Every candidate must clear **9 distinct quality gates** to earn `STRATEGY_APPROVED` status:
 
 1. **`DATA_VALID`**: Validates bar arrays, price structure validity, and data health.
-2. **`REGIME_COMPATIBLE`**: Verifies compatibility with market regime. `ATG_TREND_CONTINUATION` requires trending regime (`TRENDING_BULLISH` for BUY, `TRENDING_BEARISH` for SELL). Rejects `RANGING` and `LOW_VOLATILITY`.
+2. **`REGIME_COMPATIBLE`**: Verifies compatibility with market regime. `NEUROPIP_TREND_CONTINUATION` requires trending regime (`TRENDING_BULLISH` for BUY, `TRENDING_BEARISH` for SELL). Rejects `RANGING` and `LOW_VOLATILITY`.
 3. **`TIMEFRAME_ALIGNMENT`**: Requires $\ge 3$ of 4 timeframes aligned. Forbids higher timeframe (H4) opposing the trade direction.
 4. **`STRUCTURE_VALID`**: BUY requires Higher-Highs/Higher-Lows structure. SELL requires Lower-Highs/Lower-Lows structure.
 5. **`MOMENTUM_VALID`**: BUY requires RSI between $45.0$ and $68.0$ (strictly blocks $RSI \ge 70.0$). SELL requires RSI between $32.0$ and $55.0$ (strictly blocks $RSI \le 30.0$).

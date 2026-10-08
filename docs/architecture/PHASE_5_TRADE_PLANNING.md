@@ -1,8 +1,8 @@
-# ATG Trading Engine — Phase 5: Trade Planning, Risk Integration & Position Sizing
+# NeuroPip — Phase 5: Trade Planning, Risk Integration & Position Sizing
 
 ## 1. Executive Summary
 
-Phase 5 implements the **Trade Planning, Risk Integration & Position Sizing** layer for the ATG Trading Engine.
+Phase 5 implements the **Trade Planning, Risk Integration & Position Sizing** layer for the NeuroPip.
 Building upon the verified Phase 4 Strategy Decision Engine, Phase 5 converts approved strategy candidates into complete, explainable, risk-bounded, and broker-validated **Trade Plans**.
 
 Phase 5 answers the following critical operational questions:
@@ -74,7 +74,7 @@ EXECUTION BOUNDARY (HARD LOCK)
 
 ## 3. Trade Plan Contract (`STradePlan`)
 
-The complete data contract is defined in [`Strategy/TradePlanTypes.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Strategy/TradePlanTypes.mqh).
+The complete data contract is defined in [`Strategy/TradePlanTypes.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Strategy/TradePlanTypes.mqh).
 
 ### Data Fields
 
@@ -82,7 +82,7 @@ The complete data contract is defined in [`Strategy/TradePlanTypes.mqh`](file://
 | :--- | :--- | :--- |
 | `plan_id` | `ulong` | Unique incremental trade plan identifier |
 | `symbol` | `string` | Broker instrument name (e.g., `EURUSDm`, `BTCUSDm`) |
-| `strategy_id` | `string` | Strategy identifier (`"ATG_TREND_CONTINUATION"`) |
+| `strategy_id` | `string` | Strategy identifier (`"NEUROPIP_TREND_CONTINUATION"`) |
 | `strategy_version` | `string` | Semantic strategy version (`"1.0.0"`) |
 | `source_decision_id` | `ulong` | Reference ID linking back to the Phase 4 strategy decision |
 | `direction` | `ENUM_ATG_TRADE_DIRECTION` | `ATG_DIRECTION_BUY` or `ATG_DIRECTION_SELL` |
@@ -133,7 +133,7 @@ The complete data contract is defined in [`Strategy/TradePlanTypes.mqh`](file://
 
 ## 4. Entry Model
 
-The initial strategy `ATG_TREND_CONTINUATION` uses a deterministic market-referenced entry model:
+The initial strategy `NEUROPIP_TREND_CONTINUATION` uses a deterministic market-referenced entry model:
 - **BUY Setup**: Entry is taken at the current Ask price:
   $$Entry_{BUY} = \text{NormalizeDouble}(Tick.Ask, \text{Digits})$$
 - **SELL Setup**: Entry is taken at the current Bid price:
@@ -189,7 +189,7 @@ The SL model uses a hierarchical defense mechanism combining volatility and mark
 
 ## 7. Risk Engine Integration
 
-Phase 5 reuses the canonical Phase 2E [`Execution/RiskEngine.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Execution/RiskEngine.mqh):
+Phase 5 reuses the canonical Phase 2E [`Execution/RiskEngine.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Execution/RiskEngine.mqh):
 - TradePlanner queries `m_risk_engine.Calculate(symbol, entry, stop_loss, risk_pct, risk_result)`.
 - Validates account equity ($> 0$).
 - Enforces configured risk budget ($1.00\%$ of equity, maximum allowed $2.00\%$).
@@ -200,7 +200,7 @@ Phase 5 reuses the canonical Phase 2E [`Execution/RiskEngine.mqh`](file:///c:/Us
 
 ## 8. Position Sizing Integration
 
-Phase 5 reuses the canonical Phase 2E [`Execution/PositionSizer.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Execution/PositionSizer.mqh):
+Phase 5 reuses the canonical Phase 2E [`Execution/PositionSizer.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Execution/PositionSizer.mqh):
 - Computes loss per standard lot using `OrderCalcProfit` or tick economics:
   $$\text{Loss Per Lot} = \frac{|Entry - SL|}{TickSize} \times TickValue$$
 - Calculates raw volume:
@@ -238,7 +238,7 @@ Every Trade Plan must pass all 14 gates before reaching `TRADE_PLAN_VALID`:
 
 ## 10. Centralized Configuration
 
-All tunable parameters are centralized in [`Config/Config.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Config/Config.mqh):
+All tunable parameters are centralized in [`Config/Config.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Config/Config.mqh):
 
 ```mql5
 // Versioning
@@ -275,7 +275,7 @@ The engine emits standardized diagnostic events:
 
 ## 12. Verification & Test Suite
 
-The test suite in [`Tests/Phase5Tests.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Tests/Phase5Tests.mqh) executes 20 automated unit tests during engine initialization:
+The test suite in [`Tests/Phase5Tests.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Tests/Phase5Tests.mqh) executes 20 automated unit tests during engine initialization:
 
 1. **Valid Bullish Trade Plan**: Verifies full plan generation for BUY setups. (**PASS**)
 2. **Valid Bearish Trade Plan**: Verifies full plan generation for SELL setups. (**PASS**)
@@ -315,5 +315,5 @@ A complete repository grep confirms:
 ## 14. Known Limitations & Future Boundary
 
 1. **Execution Boundary**: Phase 5 produces Trade Plans only. It does not send order requests to brokers. Future Phase 6 will implement controlled order submission when explicitly enabled.
-2. **Strategy Count**: Currently implemented for `ATG_TREND_CONTINUATION`. Additional strategies (mean reversion, breakout) can plug into the same 14-gate trade planning architecture.
+2. **Strategy Count**: Currently implemented for `NEUROPIP_TREND_CONTINUATION`. Additional strategies (mean reversion, breakout) can plug into the same 14-gate trade planning architecture.
 3. **News Filtering**: Economic calendar news volatility filters are scheduled for a future intelligence phase.

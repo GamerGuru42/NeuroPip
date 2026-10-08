@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| MarketFeatureEngine.mqh                                          |
-//| ATG Trading Engine - Phase 3                                     |
+//| NeuroPip - Phase 3                                     |
 //| Multi-Timeframe Observable Market Features Calculator            |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+

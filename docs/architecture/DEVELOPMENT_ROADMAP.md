@@ -1,4 +1,4 @@
-# ATG Trading Engine - Development Roadmap
+# NeuroPip - Development Roadmap
 
 ## Phase Definitions
 - **Phase 0**: Architecture and specification (Current Phase).

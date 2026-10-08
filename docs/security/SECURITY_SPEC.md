@@ -1,4 +1,4 @@
-# ATG Trading Engine - Security Spec
+# NeuroPip - Security Spec
 
 ## 1. System Security
 - **Authentication**: All API communication between EA and Cloud must be authenticated via secure tokens over HTTPS.

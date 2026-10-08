@@ -1,12 +1,12 @@
-# ATG Trading Engine - System Architecture
+# NeuroPip - System Architecture
 
 ## 1. Overview
-ATG Trading Engine is a private automated trading platform designed for integration with Exness via MetaTrader 5 (MT5). The architecture is defined by a strict separation of concerns between deterministic local execution and cloud-based management.
+NeuroPip is a private automated trading platform designed for integration with Exness via MetaTrader 5 (MT5). The architecture is defined by a strict separation of concerns between deterministic local execution and cloud-based management.
 
 ## 2. System Topology
-**ATG APP -> ATG CLOUD -> MT5 VPS -> ATG_TradingEngine.ex5 -> Exness -> Markets**
+**ATG APP -> ATG CLOUD -> MT5 VPS -> NeuroPip_EA.ex5 -> Exness -> Markets**
 
-- **MT5 EA (ATG_TradingEngine.ex5)**: The deterministic local execution engine running on a VPS. Responsible for all market data ingestion, local analysis, risk management, and execution.
+- **MT5 EA (NeuroPip_EA.ex5)**: The deterministic local execution engine running on a VPS. Responsible for all market data ingestion, local analysis, risk management, and execution.
 - **ATG Cloud**: Responsible for licensing, telemetry, analytics, explanations, notifications, configuration, and research support. The cloud is **NEVER** required for an individual trade execution decision.
 
 ## 3. Core Principles

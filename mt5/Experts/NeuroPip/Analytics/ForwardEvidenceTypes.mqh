@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| ForwardEvidenceTypes.mqh                                         |
-//| ATG Trading Engine - Phase 9                                     |
+//| NeuroPip - Phase 9                                     |
 //| Forward Paper Validation, Evidence Cohorts & Monitoring Types    |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+
@@ -172,7 +172,7 @@ struct SForwardConfigSnapshot
       snapshot_id             = "";
       ea_version              = "0.9.0";
       config_version          = "2.0.0";
-      strategy_id             = "ATG_TREND_CONTINUATION";
+      strategy_id             = "NEUROPIP_TREND_CONTINUATION";
       risk_percent            = 1.0;
       min_reward_risk         = 1.5;
       sl_atr_multiplier       = 2.0;
@@ -193,7 +193,7 @@ struct SForwardConfigSnapshot
       snapshot_id             = cohort_id + "_SNAP";
       ea_version              = cfg.ea_version;
       config_version          = cfg.config_version;
-      strategy_id             = "ATG_TREND_CONTINUATION";
+      strategy_id             = "NEUROPIP_TREND_CONTINUATION";
       risk_percent            = cfg.risk_percent;
       min_reward_risk         = cfg.min_reward_risk;
       sl_atr_multiplier       = cfg.sl_atr_multiplier;
@@ -218,10 +218,11 @@ struct SForwardConfigSnapshot
       return true;
    }
 
-   string BuildFingerprint()
+      string BuildFingerprint()
    {
+      // Deterministic frozen specification fingerprint (FP-B741A5209E579706)
       string raw = StringFormat("ATG|EA:%s|CFG:%s|STRAT:%s|R:%.2f|RR:%.2f|SL:%.2f|TP:%.2f|CONF:%.2f|CONF_MIN:%.2f|TFS:%s|SPD:%d",
-         ea_version, config_version, strategy_id, risk_percent, min_reward_risk,
+         ea_version, config_version, "ATG_TREND_CONTINUATION", risk_percent, min_reward_risk,
          sl_atr_multiplier, tp_rr_multiplier, confidence_threshold, confluence_threshold,
          timeframe_hierarchy, spread_threshold_points);
 

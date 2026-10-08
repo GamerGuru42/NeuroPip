@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| PerformanceEngine.mqh                                            |
-//| ATG Trading Engine - Phase 6                                      |
+//| NeuroPip - Phase 6                                      |
 //| Paper Trading Performance & Equity Tracking Engine               |
 //| MONITOR_ONLY - No execution capability                            |
 //+------------------------------------------------------------------+

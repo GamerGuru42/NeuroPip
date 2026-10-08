@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| TradePlanner.mqh                                                 |
-//| ATG Trading Engine - Phase 5                                      |
+//| NeuroPip - Phase 5                                      |
 //| Trade Planning Engine                                             |
 //| Converts approved Phase 4 Strategy Candidates into structured,   |
 //| explainable Trade Plans using existing RiskEngine & PositionSizer.|

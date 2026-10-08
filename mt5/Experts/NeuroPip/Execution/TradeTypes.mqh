@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| TradeTypes.mqh                                                   |
-//| ATG Trading Engine - Phase 2A                                   |
+//| NeuroPip - Phase 2A                                   |
 //| Execution Contracts                                              |
 //|                                                                  |
 //| Defines trade intent/result structures only.                    |

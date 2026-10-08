@@ -18,7 +18,7 @@
 
 ## 1. Executive Summary & Evaluation Objective
 
-The objective of Phase 8 is **not** to optimize strategy parameters, curve-fit rules, or manufacture backtest profits. Rather, Phase 8 establishes a rigorous, quantitative framework to determine whether the existing `ATG_TREND_CONTINUATION` strategy demonstrates a potentially repeatable statistical edge under paper-trading simulation conditions.
+The objective of Phase 8 is **not** to optimize strategy parameters, curve-fit rules, or manufacture backtest profits. Rather, Phase 8 establishes a rigorous, quantitative framework to determine whether the existing `NEUROPIP_TREND_CONTINUATION` strategy demonstrates a potentially repeatable statistical edge under paper-trading simulation conditions.
 
 Phase 8 provides:
 1. **Durable Dataset Integrity Auditing**: Automated detection of missing fields, inverted timestamps, duplicate identifiers, or corrupted records.
@@ -161,7 +161,7 @@ Trades are conditioned on the market regime identified by `CMarketRegimeEngine` 
 6. `REGIME_COMPRESSION` / `REGIME_EXPANSION`
 7. `REGIME_TRANSITION` / `REGIME_INSUFFICIENT_DATA`
 
-Verifies that `ATG_TREND_CONTINUATION` executes exclusively during trending regimes, and that performance degrades if trades leak into non-trending regimes.
+Verifies that `NEUROPIP_TREND_CONTINUATION` executes exclusively during trending regimes, and that performance degrades if trades leak into non-trending regimes.
 
 ---
 
@@ -328,5 +328,5 @@ The master verdict classifies the strategy's statistical evidence under simulate
 
 ### Recommendations for Future Phases:
 1. Allow the paper trading engine to accumulate at least $50-100$ closed trades across diverse market conditions before considering any live micro-pilot.
-2. Maintain parameter freeze on `ATG_TREND_CONTINUATION` to ensure data cleanliness and avoid look-ahead bias.
+2. Maintain parameter freeze on `NEUROPIP_TREND_CONTINUATION` to ensure data cleanliness and avoid look-ahead bias.
 3. Review periodic diagnostics reports to verify that `P95_DD` and `prob_drawdown_exceeding_10pct` remain within acceptable risk bounds.

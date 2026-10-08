@@ -1,4 +1,4 @@
-# ATG Trading Engine - Market Intelligence Spec
+# NeuroPip - Market Intelligence Spec
 
 ## 1. Market Data Ingestion
 The EA dynamically discovers and manages the symbol universe. Hard-coded symbol names are forbidden.

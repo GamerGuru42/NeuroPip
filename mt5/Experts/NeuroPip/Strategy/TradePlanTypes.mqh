@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| TradePlanTypes.mqh                                               |
-//| ATG Trading Engine - Phase 5                                      |
+//| NeuroPip - Phase 5                                      |
 //| Trade Plan Data Structures, Enums, and Gate Flags                |
 //| MONITOR_ONLY - No execution capability                            |
 //|                                                                  |

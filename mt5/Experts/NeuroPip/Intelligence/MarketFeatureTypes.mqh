@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| MarketFeatureTypes.mqh                                           |
-//| ATG Trading Engine - Phase 3                                     |
+//| NeuroPip - Phase 3                                     |
 //| Market Features Data Types and Structures                        |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+

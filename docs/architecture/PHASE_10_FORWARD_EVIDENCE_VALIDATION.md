@@ -2,7 +2,7 @@
 
 ## 1. Executive Summary & Objective
 
-**Phase 10: Forward Evidence Accumulation, Monitoring & Validation** transitions the ATG Trading Engine from initial framework verification into an autonomous, long-horizon forward-paper research and evidence accumulation engine operating in MetaTrader 5 (MT5). Attached to an Exness Demo account with live market data feeds across a 5-symbol universe (`BTCUSDm`, `EURUSDm`, `USDJPYm`, `XAUUSDm`, `ETHUSDm`), the engine systematically executes simulated paper trades while live broker execution remains **strictly disabled**.
+**Phase 10: Forward Evidence Accumulation, Monitoring & Validation** transitions the NeuroPip from initial framework verification into an autonomous, long-horizon forward-paper research and evidence accumulation engine operating in MetaTrader 5 (MT5). Attached to an Exness Demo account with live market data feeds across a 5-symbol universe (`BTCUSDm`, `EURUSDm`, `USDJPYm`, `XAUUSDm`, `ETHUSDm`), the engine systematically executes simulated paper trades while live broker execution remains **strictly disabled**.
 
 The architectural objective of Phase 10 is to accumulate an unpolluted, statistically valid sample of genuine forward market trades without parameter tuning or curve-fitting, applying continuous forensic data quality checks, persistent multi-tier snapshot logging, and real-time operational diagnostics until sufficient evidence exists to reach formal validation decisions.
 
@@ -70,7 +70,7 @@ Every genuine forward trade record persisted to `paper_trades_closed.csv` retain
 10. `risk_money`: Cash risk budget (allocated from $10.00 paper equity)
 11. `net_pnl`: Realized net profit/loss in paper cash
 12. `realized_r`: Realized gain/loss normalized in units of initial risk ($R$)
-13. `strategy_id`: Canonical strategy identifier (`ATG_TREND_CONTINUATION`)
+13. `strategy_id`: Canonical strategy identifier (`NEUROPIP_TREND_CONTINUATION`)
 14. `config_fingerprint`: Deterministic 64-bit FNV-1a hash of active configuration
 15. `regime`: Detected market regime at entry (e.g. `REGIME_TRENDING_BULLISH`)
 16. `strategy_confidence`: Quantitative signal confidence score $[0.0, 1.0]$
@@ -87,7 +87,7 @@ During Phase 10, trading rules, risk parameters, and operational filters are fro
 
 ### Frozen Strategy Contract
 
-- **Strategy Engine**: Single-strategy focus on `ATG_TREND_CONTINUATION`.
+- **Strategy Engine**: Single-strategy focus on `NEUROPIP_TREND_CONTINUATION`.
 - **Risk per Trade**: Exactly 1.0% of current paper equity ($0.10 risk budget on $10.00 equity).
 - **Minimum Reward-to-Risk**: 1.50 $R$.
 - **Stop Loss Distance**: 2.0x ATR(14) on entry timeframe (M15).
@@ -176,7 +176,7 @@ Every rejected trade is quarantined in memory, emitted via `CForwardAlertManager
 
 ## 7. Multi-Tier Periodic Persistent Snapshots
 
-The engine maintains 3 persistent time-series snapshot tables in `MQL5/Files/ATG_TradingEngine/Persistence/`:
+The engine maintains 3 persistent time-series snapshot tables in `MQL5/Files/NeuroPip_EA/Persistence/`:
 
 1. **Daily Snapshots (`forward_daily_snapshots.csv`)**:
    - Schema: `date_key,timestamp,cohort_id,trades_generated,trades_closed,sample_size,pnl,realized_r,drawdown,drawdown_pct,data_health,persistence_health,anomalies_count,anomalies_summary`

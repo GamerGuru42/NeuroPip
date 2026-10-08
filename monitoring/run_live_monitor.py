@@ -1,4 +1,4 @@
-# run_live_monitor.py - Persistent Monitor for ATG Trading Engine
+# run_live_monitor.py - Persistent Monitor for NeuroPip
 import time
 import os
 import sys
@@ -24,7 +24,7 @@ today_str = time.strftime("%Y%m%d")
 log_path = os.path.join(log_dir, f"{today_str}.log")
 last_pos = os.path.getsize(log_path) if os.path.exists(log_path) else 0
 
-print("=== ATG Trading Engine - Live Forward Monitor ===")
+print("=== NeuroPip - Live Forward Monitor ===")
 pids = get_running_mt5_pids()
 if pids:
     print(f"MT5 terminal64 is ALREADY running with PID(s): {pids}")

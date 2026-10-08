@@ -1,4 +1,4 @@
-# runtime_supervisor.py - Phase 10 Persistent Runtime Supervisor for ATG Trading Engine
+# runtime_supervisor.py - Phase 10 Persistent Runtime Supervisor for NeuroPip
 import os
 import sys
 import time
@@ -60,7 +60,7 @@ def get_ea_status():
     if os.path.exists(term_log):
         with open(term_log, "r", encoding="utf-16le", errors="ignore") as f:
             for line in f:
-                if "ATG_TradingEngine" in line:
+                if "NeuroPip_EA" in line:
                     last_event = line.strip()
 
     if not last_event or "removed" in last_event or "failed with code" in last_event:
@@ -99,7 +99,7 @@ def launch_mt5():
     if "SUCCESS" not in res.stdout:
         # Fallback to direct shell execution
         log_supervisor(f"Scheduled task run returned: {res.stdout.strip()} - launching via start command...")
-        bat = os.environ.get("MT5_LAUNCH_BAT", "Launch_ATG_TradingEngine.bat")
+        bat = os.environ.get("MT5_LAUNCH_BAT", "Launch_NeuroPip.bat")
         subprocess.run(["cmd.exe", "/c", f'start "" "{bat}"'])
     time.sleep(3)
 

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| Phase5Tests.mqh                                                  |
-//| ATG Trading Engine - Phase 5                                      |
+//| NeuroPip - Phase 5                                      |
 //| Trade Planning, Risk Integration & Position Sizing Test Suite     |
 //| MONITOR_ONLY - No execution capability                            |
 //|                                                                  |
@@ -51,7 +51,7 @@ private:
       dec.Reset();
       dec.decision_id         = dec_id;
       dec.symbol              = symbol;
-      dec.strategy_id         = "ATG_TREND_CONTINUATION";
+      dec.strategy_id         = "NEUROPIP_TREND_CONTINUATION";
       dec.strategy_version    = "1.0.0";
       dec.direction           = dir;
       dec.status              = STRATEGY_APPROVED;
@@ -81,7 +81,7 @@ public:
       plan.Reset();
       plan.plan_id            = 1001;
       plan.symbol             = "EURUSDm";
-      plan.strategy_id        = "ATG_TREND_CONTINUATION";
+      plan.strategy_id        = "NEUROPIP_TREND_CONTINUATION";
       plan.direction          = ATG_DIRECTION_BUY;
       plan.entry_price        = 1.10000;
       plan.stop_loss          = 1.09600; // 400 pts below entry
@@ -131,7 +131,7 @@ public:
       plan.Reset();
       plan.plan_id            = 1002;
       plan.symbol             = "USDJPYm";
-      plan.strategy_id        = "ATG_TREND_CONTINUATION";
+      plan.strategy_id        = "NEUROPIP_TREND_CONTINUATION";
       plan.direction          = ATG_DIRECTION_SELL;
       plan.entry_price        = 150.000;
       plan.stop_loss          = 150.500; // 500 pts above entry

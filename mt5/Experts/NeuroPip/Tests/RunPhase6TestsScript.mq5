@@ -1,8 +1,8 @@
 //+------------------------------------------------------------------+
 //| RunPhase6TestsScript.mq5                                         |
-//| ATG Trading Engine - Standalone Phase 6 Test Runner Script       |
+//| NeuroPip - Standalone Phase 6 Test Runner Script       |
 //+------------------------------------------------------------------+
-#property copyright "ATG"
+#property copyright "NextGen Technologies"
 #property link      ""
 #property version   "1.00"
 #property script_show_inputs
@@ -16,7 +16,7 @@
 void OnStart()
 {
    CLogger logger(LOG_LEVEL_DEBUG);
-   Print("=== RUNNING ATG ENGINE PHASE 3-6 TEST SUITES ===");
+   Print("=== RUNNING NEUROPIP ENGINE PHASE 3-6 TEST SUITES ===");
 
    CPhase3Tests p3(&logger);
    bool p3_ok = p3.RunAllTests();

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| StrategyDecisionEngine.mqh                                       |
-//| ATG Trading Engine - Phase 4                                     |
+//| NeuroPip - Phase 4                                     |
 //| Central Strategy Decision Coordinator                            |
 //| Multi-Symbol State Management, Duplicate Control & Diagnostics   |
 //| MONITOR_ONLY - No execution capability                           |

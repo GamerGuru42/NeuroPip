@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| MarketRegimeTypes.mqh                                            |
-//| ATG Trading Engine - Phase 3                                     |
+//| NeuroPip - Phase 3                                     |
 //| Market Regime Classification Types and Structures                |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+

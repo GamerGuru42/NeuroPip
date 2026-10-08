@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| DiagnosticsEngine.mqh                                            |
-//| ATG Trading Engine - Phase 7                                      |
+//| NeuroPip - Phase 7                                      |
 //+------------------------------------------------------------------+
 #ifndef ATG_DIAGNOSTICS_ENGINE_MQH
 #define ATG_DIAGNOSTICS_ENGINE_MQH
@@ -50,7 +50,7 @@ public:
       }
 
       report += "\nMarket Intelligence:\nACTIVE (Features / Regime / Signal Foundation)\n";
-      report += "Strategy Decision Engine:\nACTIVE (ATG_TREND_CONTINUATION / Multi-Gate Quality Validation / CONFIG FROZEN)\n";
+      report += "Strategy Decision Engine:\nACTIVE (NEUROPIP_TREND_CONTINUATION / Multi-Gate Quality Validation / CONFIG FROZEN)\n";
       report += "Trade Planning Engine:\nACTIVE (14-Gate Validation / ATR Stop / RR Target / RiskEngine & PositionSizer)\n";
       report += "Paper Trading Engine:\nACTIVE (Deterministic Fill / Conservative Ambiguity SL / Zero Live Orders)\n";
       report += "Persistent Storage:\nACTIVE (Durable Schema v2 / Atomic Active / Closed History / Snapshot History / Audit Trail)\n";

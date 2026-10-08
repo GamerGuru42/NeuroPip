@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| MarketIntelligenceEngine.mqh                                     |
-//| ATG Trading Engine - Phase 3                                     |
+//| NeuroPip - Phase 3                                     |
 //| Central Market Intelligence Coordinator                          |
 //| Orchestrates Features -> Regime -> Signal Candidate              |
 //| MONITOR_ONLY - No execution capability                           |

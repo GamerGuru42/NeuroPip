@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| EventScheduler.mqh                                               |
-//| ATG Trading Engine - Phase 1C                                    |
+//| NeuroPip - Phase 1C                                    |
 //| Deterministic runtime scheduling                                 |
 //+------------------------------------------------------------------+
 #ifndef ATG_EVENT_SCHEDULER_MQH

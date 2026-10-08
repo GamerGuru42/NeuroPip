@@ -1,4 +1,4 @@
-# ATG Trading Engine - Explainability Spec
+# NeuroPip - Explainability Spec
 
 ## 1. Core Principle
 The EA must emit structured, machine-readable reason codes and metrics. It must **not** generate natural-language explanations locally. The ATG Cloud translates these structures into plain English for the User Dashboard.

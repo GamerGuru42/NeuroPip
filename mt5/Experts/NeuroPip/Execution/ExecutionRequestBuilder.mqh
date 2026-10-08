@@ -3,7 +3,7 @@
 // Accepts a validated SATGTradeIntent and constructs a normalized MqlTradeRequest.
 // REUSES the COrderCheckEngine's request-building and symbol-resolution logic
 // rather than duplicating it.
-#property copyright "ATG"
+#property copyright "NextGen Technologies"
 #property link      ""
 
 #include "TradeTypes.mqh"

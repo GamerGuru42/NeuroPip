@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| Phase3Tests.mqh                                                  |
-//| ATG Trading Engine - Phase 3                                     |
+//| NeuroPip - Phase 3                                     |
 //| Market Intelligence & Signal Foundation Test Suite               |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+

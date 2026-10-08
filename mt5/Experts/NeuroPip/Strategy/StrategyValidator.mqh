@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| StrategyValidator.mqh                                            |
-//| ATG Trading Engine - Phase 4                                     |
+//| NeuroPip - Phase 4                                     |
 //| Multi-Gate Strategy Validation Framework                         |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+

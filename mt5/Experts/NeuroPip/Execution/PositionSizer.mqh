@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| PositionSizer.mqh                                                |
-//| ATG Trading Engine - Phase 2E                                   |
+//| NeuroPip - Phase 2E                                   |
 //| Canonical Location: Execution/PositionSizer.mqh                  |
 //|                                                                  |
 //| Position Sizing Engine                                           |

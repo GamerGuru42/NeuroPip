@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| PaperTradeStorage.mqh                                            |
-//| ATG Trading Engine - Phase 7                                      |
+//| NeuroPip - Phase 7                                      |
 //| Durable Storage Engine for Active/Closed Paper Trades & Equity   |
 //| MONITOR_ONLY - No execution capability                            |
 //+------------------------------------------------------------------+

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
-//| ATG_TradingEngine.mq5                                            |
-//| ATG Trading Engine - Phase 9                                     |
+//| NeuroPip_EA.mq5                                            |
+//| NeuroPip - Phase 10 Forward Validation                                     |
 //|                                                                  |
 //| Phase 9: Forward Paper Validation, Monitoring & Evidence Collect |
 //|          Frozen Configuration & Real Market Data Validation      |
@@ -13,7 +13,8 @@
 //| NO live execution                                                 |
 //+------------------------------------------------------------------+
 
-#property copyright "ATG"
+#property copyright "NextGen Technologies"
+#property link      "https://github.com/GamerGuru42/NeuroPip"
 #property link      ""
 #property version   "2.00"
 
@@ -881,7 +882,7 @@ int OnInit()
       LOG_LEVEL_INFO,
       "Core",
       "INIT_START",
-      "Starting ATG Trading Engine Phase 2F Initialization."
+      "Starting NeuroPip Phase 2F Initialization."
    );
 
 
@@ -1559,7 +1560,7 @@ int OnInit()
       LOG_LEVEL_INFO,
       "Core",
       "INIT_SUCCESS",
-      "ATG Trading Engine initialized successfully in Phase 10 MONITOR_ONLY mode (Forward Evidence Accumulation, Monitoring & Validation Active)."
+      "NeuroPip initialized successfully in Phase 10 MONITOR_ONLY mode (Forward Evidence Accumulation, Monitoring & Validation Active)."
    );
 
 
@@ -1583,7 +1584,7 @@ void OnDeinit(
       "SHUTDOWN",
 
       StringFormat(
-         "ATG Trading Engine shutting down. Reason: %d",
+         "NeuroPip shutting down. Reason: %d",
          reason
       )
    );

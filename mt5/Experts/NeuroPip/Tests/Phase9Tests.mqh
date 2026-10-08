@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| Phase9Tests.mqh                                                  |
-//| ATG Trading Engine - Phase 9                                     |
+//| NeuroPip - Phase 9                                     |
 //| Forward Paper Validation, Monitoring & Evidence Collection Suite |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+
@@ -46,7 +46,7 @@ private:
       t.Reset();
       t.paper_trade_id       = id;
       t.source_plan_id       = id + 1000;
-      t.strategy_id          = "ATG_TREND_CONTINUATION";
+      t.strategy_id          = "NEUROPIP_TREND_CONTINUATION";
       t.symbol               = symbol;
       t.direction            = dir;
       t.primary_timeframe    = PERIOD_M15;

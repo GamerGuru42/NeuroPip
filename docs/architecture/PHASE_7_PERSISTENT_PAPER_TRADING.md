@@ -57,7 +57,7 @@ graph TD
 ## Persistence Design & Storage Engine
 
 ### MQL5 Native File Storage
-The persistence subsystem is implemented in [`Persistence/PaperTradeStorage.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Persistence/PaperTradeStorage.mqh) using standard, native MQL5 File I/O functions (`FileOpen`, `FileWriteString`, `FileReadString`, `FileClose`).
+The persistence subsystem is implemented in [`Persistence/PaperTradeStorage.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Persistence/PaperTradeStorage.mqh) using standard, native MQL5 File I/O functions (`FileOpen`, `FileWriteString`, `FileReadString`, `FileClose`).
 
 - **Base Directory**: `MQL5\Files\ATG_Simulation\` (sandboxed to MT5 data folder).
 - **Format**: Structured Delimited CSV tables with explicit `# SCHEMA_VERSION: 1` header comments.
@@ -88,7 +88,7 @@ Every persisted file begins with the schema header:
 |---|---|---|---|
 | 0 | `paper_trade_id` | ulong | Deterministic monotonic trade ID |
 | 1 | `source_plan_id` | ulong | Phase 5 Trade Plan ID |
-| 2 | `strategy_id` | string | Strategy name (`"ATG_TREND_CONTINUATION"`) |
+| 2 | `strategy_id` | string | Strategy name (`"NEUROPIP_TREND_CONTINUATION"`) |
 | 3 | `symbol` | string | Broker symbol name (e.g. `"EURUSDm"`) |
 | 4 | `direction` | int | `0 = BUY`, `1 = SELL` |
 | 5 | `primary_timeframe` | int | Primary analysis timeframe |
@@ -138,13 +138,13 @@ On EA initialization (`CPaperTradingEngine::Initialize()`):
 
 ## Historical Performance & Multi-Period Analytics
 
-Phase 7 implements [`Persistence/HistoricalAnalyticsEngine.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Persistence/HistoricalAnalyticsEngine.mqh), providing comprehensive performance reconstruction from persisted history.
+Phase 7 implements [`Persistence/HistoricalAnalyticsEngine.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Persistence/HistoricalAnalyticsEngine.mqh), providing comprehensive performance reconstruction from persisted history.
 
 ### Analytics Metric Suite
 - **Overall Statistics**: Total trades, wins, losses, breakevens, win rate, loss rate, gross profit, gross loss, net P&L, profit factor, average win, average loss, average R, mathematical expectancy ($R$), maximum drawdown ($ & %), winning streak, losing streak, average duration, longest duration.
 - **Categorical Breakdowns**:
   - By Symbol (EURUSDm, USDJPYm, XAUUSDm, BTCUSDm, ETHUSDm).
-  - By Strategy (e.g. `ATG_TREND_CONTINUATION`).
+  - By Strategy (e.g. `NEUROPIP_TREND_CONTINUATION`).
   - By Market Regime (e.g. `TRENDING_BULL_STRONG`, `RANGING_COMPRESSED`).
 - **Periodic Aggregations**:
   - **Daily Breakdown**: Aggregated by ISO date key (`YYYY-MM-DD`).
@@ -187,7 +187,7 @@ All critical simulation and persistence lifecycle transitions are logged to `MQL
 
 ## Testing Verification
 
-The test suite in [`Tests/Phase7Tests.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Tests/Phase7Tests.mqh) comprises **32 comprehensive tests**:
+The test suite in [`Tests/Phase7Tests.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Tests/Phase7Tests.mqh) comprises **32 comprehensive tests**:
 
 | Test ID | Description | Result |
 |---|---|---|

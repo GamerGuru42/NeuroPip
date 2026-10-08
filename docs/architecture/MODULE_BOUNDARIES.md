@@ -1,4 +1,4 @@
-# ATG Trading Engine - Module Boundaries
+# NeuroPip - Module Boundaries
 
 The MT5 EA is strictly modular. The main EA file orchestrates these independent modules rather than containing implementation details.
 

@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| PaperTradeTypes.mqh                                              |
-//| ATG Trading Engine - Phase 6                                      |
+//| NeuroPip - Phase 6                                      |
 //| Paper Trading Data Structures, Enums & Lifecycle Contracts       |
 //| MONITOR_ONLY - No execution capability                            |
 //|                                                                  |
@@ -49,7 +49,7 @@ struct SPaperTrade
    // Identification
    ulong                          paper_trade_id;        // Unique simulation trade identifier
    ulong                          source_plan_id;        // Source Phase 5 Trade Plan ID
-   string                         strategy_id;           // Strategy identifier (e.g. "ATG_TREND_CONTINUATION")
+   string                         strategy_id;           // Strategy identifier (e.g. "NEUROPIP_TREND_CONTINUATION")
    string                         symbol;                // Broker symbol (e.g. "EURUSDm")
    ENUM_ATG_TRADE_DIRECTION       direction;             // Trade direction (BUY / SELL)
    ENUM_TIMEFRAMES                primary_timeframe;     // Primary analysis timeframe (e.g. PERIOD_M15)

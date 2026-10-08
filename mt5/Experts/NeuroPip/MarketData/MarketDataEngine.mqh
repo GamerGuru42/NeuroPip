@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| MarketDataEngine.mqh                                             |
-//| ATG Trading Engine - Phase 1C                                    |
+//| NeuroPip - Phase 1C                                    |
 //| Live Tick + Multi-Timeframe Bar Processing                       |
 //| MONITOR_ONLY - No trading operations                             |
 //+------------------------------------------------------------------+

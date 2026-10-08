@@ -20,7 +20,7 @@
 
 Phase 9 transitions the completed Phase 8 statistical evaluation framework into a controlled, persistent, forward-paper evidence collection phase using **real live market data** streaming from Exness MT5 and the existing deterministic paper-trading engine.
 
-The explicit objective of Phase 9 is **not** strategy development, iterative backtesting, or metric maximization. Instead, Phase 9 establishes an unyielding scientific methodology to determine whether the frozen `ATG_TREND_CONTINUATION` strategy exhibits a statistically repeatable edge under genuine forward-paper conditions across a structured sample of **50 to 100 forward live paper trades**.
+The explicit objective of Phase 9 is **not** strategy development, iterative backtesting, or metric maximization. Instead, Phase 9 establishes an unyielding scientific methodology to determine whether the frozen `NEUROPIP_TREND_CONTINUATION` strategy exhibits a statistically repeatable edge under genuine forward-paper conditions across a structured sample of **50 to 100 forward live paper trades**.
 
 ### Key Architectural Pillars:
 1. **Strict Dataset Classification & Isolation**: Rigorous physical and logical segregation of `FORWARD_LIVE_PAPER` trades from `SYNTHETIC_TEST` benchmark trades and legacy `HISTORICAL_IMPORTED` records.
@@ -42,7 +42,7 @@ flowchart TD
     end
 
     subgraph StrategyDecisionLayer [Frozen Strategy Layer - Version 0.9.0]
-        REG --> STRAT[ATG_TREND_CONTINUATION]
+        REG --> STRAT[NEUROPIP_TREND_CONTINUATION]
         STRAT --> SIG[Candidate Signal: candidate_only=true]
         SIG --> VAL[Strategy Signal Validator]
     end
@@ -281,7 +281,7 @@ The Phase 9 diagnostic reporting engine provides real-time visibility into the f
 
 ## 10. Operational Guidelines During Evidence Collection
 
-1. **Terminal Attachment**: Attach `ATG_TradingEngine.ex5` to a single chart (e.g. `EURUSDm, M15`) on an Exness MT5 Demo account.
+1. **Terminal Attachment**: Attach `NeuroPip_EA.ex5` to a single chart (e.g. `EURUSDm, M15`) on an Exness MT5 Demo account.
 2. **Timer Ticks**: Ensure `Timer` events fire every 1 second to drive bar evaluation, paper position tracking, and forward monitoring.
 3. **Zero Configuration Modifications**: Do not change EA inputs, timeframe parameters, or risk settings. Any modification alters the fingerprint and marks subsequent trades as invalid.
 4. **Milestone Reviews**: When valid forward trade count reaches 15, 30, 50, 75, and 100, generate the diagnostic report and inspect statistical consistency against Phase 8 benchmark distributions.

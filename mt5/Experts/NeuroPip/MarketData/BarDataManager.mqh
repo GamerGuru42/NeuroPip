@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| BarDataManager.mqh                                               |
-//| ATG Trading Engine - Phase 1C                                     |
+//| NeuroPip - Phase 1C                                     |
 //| Reliable Multi-Timeframe Closed-Bar Detection                    |
 //| MONITOR_ONLY - No trading operations                              |
 //+------------------------------------------------------------------+

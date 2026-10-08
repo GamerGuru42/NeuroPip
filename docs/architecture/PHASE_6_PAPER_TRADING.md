@@ -53,7 +53,7 @@ graph TD
 
 ## Paper Trade Data Contract
 
-The paper trade data contract is defined in [`Simulation/PaperTradeTypes.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Simulation/PaperTradeTypes.mqh):
+The paper trade data contract is defined in [`Simulation/PaperTradeTypes.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Simulation/PaperTradeTypes.mqh):
 
 ### Status Enum: `ENUM_PAPER_TRADE_STATUS`
 - `PAPER_PENDING`: Order plan received, awaiting simulated fill.
@@ -67,7 +67,7 @@ The paper trade data contract is defined in [`Simulation/PaperTradeTypes.mqh`](f
 
 ### Structured Record: `SPaperTrade`
 Captures 30+ standardized fields for complete explainability and auditability:
-- **Identification**: `paper_trade_id` (unique monotonic ID), `source_plan_id` (Phase 5 plan ID), `strategy_id` (`"ATG_TREND_CONTINUATION"`).
+- **Identification**: `paper_trade_id` (unique monotonic ID), `source_plan_id` (Phase 5 plan ID), `strategy_id` (`"NEUROPIP_TREND_CONTINUATION"`).
 - **Market Context**: `symbol`, `direction`, `primary_timeframe`, `regime` (from Phase 3), `strategy_confidence`, `strategy_quality`.
 - **Timing**: `entry_time`, `exit_time`, `source_bar_time`, `holding_duration_sec`.
 - **Pricing**: `entry_price` (exact planned entry), `stop_loss`, `take_profit`, `exit_price`, `spread_entry`.
@@ -106,7 +106,7 @@ Positions are evaluated strictly on **closed bars** (`CBarDataManager`) to elimi
 > [!IMPORTANT]
 > **Deterministic Conservative Policy**: When both Stop Loss and Take Profit fall within the price range of a single candle (`bar.low <= SL && bar.high >= TP` for BUY, or `bar.high >= SL && bar.low <= TP` for SELL), OHLC candle data cannot ascertain whether SL or TP was reached first.
 >
-> The ATG Trading Engine implements a **strictly conservative policy**:
+> The NeuroPip implements a **strictly conservative policy**:
 > - It **assumes the Stop Loss was hit first**.
 > - Exit price is set to `stop_loss`.
 > - Status is set to `PAPER_CLOSED_SL`.
@@ -151,7 +151,7 @@ This prevents optimistic bias and avoids overstating strategy performance.
 
 ## Performance Engine Metrics
 
-[`Simulation/PerformanceEngine.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Simulation/PerformanceEngine.mqh) tracks:
+[`Simulation/PerformanceEngine.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Simulation/PerformanceEngine.mqh) tracks:
 - **Totals**: Total trades, winning trades, losing trades, breakeven trades.
 - **Rates**: Win rate ($\%$) and Loss rate ($\%$).
 - **Financials**: Gross profit, gross loss, net P&L, profit factor ($GrossProfit / GrossLoss$).
@@ -167,7 +167,7 @@ This prevents optimistic bias and avoids overstating strategy performance.
 
 The performance engine decomposes results across three distinct dimensions:
 1. **Symbol Breakdown**: Tracked separately for `EURUSDm`, `USDJPYm`, `XAUUSDm`, `BTCUSDm`, `ETHUSDm`.
-2. **Strategy Breakdown**: Tracked by Strategy ID (`"ATG_TREND_CONTINUATION"`). Extensible for future strategies.
+2. **Strategy Breakdown**: Tracked by Strategy ID (`"NEUROPIP_TREND_CONTINUATION"`). Extensible for future strategies.
 3. **Market Regime Breakdown**: Tracked across 7 market regimes (`REGIME_TRENDING_BULLISH`, `REGIME_TRENDING_BEARISH`, `REGIME_RANGING`, `REGIME_HIGH_VOLATILITY`, `REGIME_LOW_VOLATILITY`, `REGIME_TRANSITION`, `REGIME_INSUFFICIENT_DATA`).
 
 ---
@@ -192,7 +192,7 @@ To prevent false conclusions from small data samples:
 
 ## Automated Test Suite (25 Tests)
 
-[`Tests/Phase6Tests.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/ATG_TradingEngine/Tests/Phase6Tests.mqh) verifies all 25 critical Phase 6 simulation requirements:
+[`Tests/Phase6Tests.mqh`](file:///c:/Users/biduo/Downloads/Forex%20Bot/mt5/NeuroPip_EA/Tests/Phase6Tests.mqh) verifies all 25 critical Phase 6 simulation requirements:
 1. Valid BUY paper trade creation
 2. Valid SELL paper trade creation
 3. BUY Take Profit hit detection

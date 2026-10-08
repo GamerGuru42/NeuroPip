@@ -1,12 +1,12 @@
 //+------------------------------------------------------------------+
 //| TrendContinuationStrategy.mqh                                    |
-//| ATG Trading Engine - Phase 4                                     |
-//| Primary Strategy: ATG_TREND_CONTINUATION                         |
+//| NeuroPip - Phase 4                                     |
+//| Primary Strategy: NEUROPIP_TREND_CONTINUATION                         |
 //| Confluence Scoring, Rule Evaluation, Candidate Generation        |
 //| MONITOR_ONLY - No execution capability                           |
 //+------------------------------------------------------------------+
-#ifndef ATG_TREND_CONTINUATION_STRATEGY_MQH
-#define ATG_TREND_CONTINUATION_STRATEGY_MQH
+#ifndef NEUROPIP_TREND_CONTINUATION_STRATEGY_MQH
+#define NEUROPIP_TREND_CONTINUATION_STRATEGY_MQH
 
 #include "StrategyTypes.mqh"
 #include "StrategyValidator.mqh"

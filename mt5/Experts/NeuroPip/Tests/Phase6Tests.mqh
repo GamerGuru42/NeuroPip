@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
 //| Phase6Tests.mqh                                                  |
-//| ATG Trading Engine - Phase 6                                      |
+//| NeuroPip - Phase 6                                      |
 //| Paper Trading & Performance Engine Test Suite                    |
 //| MONITOR_ONLY - No execution capability                            |
 //|                                                                  |
@@ -55,7 +55,7 @@ private:
       plan.Reset();
       plan.plan_id            = plan_id;
       plan.symbol             = symbol;
-      plan.strategy_id        = "ATG_TREND_CONTINUATION";
+      plan.strategy_id        = "NEUROPIP_TREND_CONTINUATION";
       plan.strategy_version   = "1.0.0";
       plan.source_decision_id = 8001;
       plan.direction          = dir;
@@ -467,7 +467,7 @@ public:
       t.Reset();
       t.paper_trade_id = 1;
       t.symbol = "EURUSDm";
-      t.strategy_id = "ATG_TREND_CONTINUATION";
+      t.strategy_id = "NEUROPIP_TREND_CONTINUATION";
       t.net_pnl = 250.00;
       t.risk_money = 100.00;
       t.realized_r = 2.50;
@@ -718,8 +718,8 @@ public:
 
       CPerformanceEngine perf(m_logger, 10000.0, 30);
 
-      SPaperTrade t1; t1.Reset(); t1.strategy_id = "ATG_TREND_CONTINUATION"; t1.net_pnl = 300.0; t1.symbol = "EURUSDm";
-      SPaperTrade t2; t2.Reset(); t2.strategy_id = "ATG_TREND_CONTINUATION"; t2.net_pnl = -100.0; t2.symbol = "USDJPYm";
+      SPaperTrade t1; t1.Reset(); t1.strategy_id = "NEUROPIP_TREND_CONTINUATION"; t1.net_pnl = 300.0; t1.symbol = "EURUSDm";
+      SPaperTrade t2; t2.Reset(); t2.strategy_id = "NEUROPIP_TREND_CONTINUATION"; t2.net_pnl = -100.0; t2.symbol = "USDJPYm";
 
       perf.RecordTrade(t1);
       perf.RecordTrade(t2);
@@ -728,7 +728,7 @@ public:
       perf.GetStrategyStats(0, strat_perf);
 
       bool ok = (perf.GetStrategyStatsCount() == 1 &&
-                 strat_perf.strategy_id == "ATG_TREND_CONTINUATION" &&
+                 strat_perf.strategy_id == "NEUROPIP_TREND_CONTINUATION" &&
                  strat_perf.trades == 2 &&
                  strat_perf.wins == 1 &&
                  MathAbs(strat_perf.net_pnl - 200.0) < 0.01);

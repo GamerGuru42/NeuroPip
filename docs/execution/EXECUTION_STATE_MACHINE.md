@@ -1,4 +1,4 @@
-# ATG Trading Engine - Execution State Machine
+# NeuroPip - Execution State Machine
 
 ## 1. Overview
 Trade execution follows a strict lifecycle. We do not assume `OrderSend(true)` means success. Idempotency and reconciliation via `OnTradeTransaction()` are mandatory.
