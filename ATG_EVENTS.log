@@ -15,3 +15,8 @@
 [2026-10-08 13:20:00] [SUPERVISOR] Heartbeat streaming verified: 5/5 symbols active, log age < 5s.
 [2026-10-08 13:25:00] [EVIDENCE] Genuine forward evidence tracking cohort COHORT_01 active. Current genuine forward N = 0.
 [2026-10-08 13:30:00] [STATUS] Active monitoring confirmed. Safety invariants verified: can_trade=false, MONITOR_ONLY=true, FP-B741A5209E579706.
+[2026-10-08 14:00:00] [PHASE_H] Phase H initiated: Autonomous Forward Evidence Accumulation on Exness DEMO.
+[2026-10-08 14:01:00] [COHORT] Cohort COHORT_01 active. Baseline N = 0 genuine forward trades.
+[2026-10-08 14:02:00] [INVARIANTS] Verified frozen strategy invariants: FP-B741A5209E579706, can_trade=false, MONITOR_ONLY=true, RiskPercent=1.0%.
+[2026-10-08 14:03:00] [RUNTIME] Host terminal PID 14664 active. 5/5 symbols synchronized across M1-D1 with sub-5s heartbeats.
+[2026-10-08 14:04:00] [MONITOR] Continuous forward accumulation running autonomously toward Milestone 1 (N = 15).

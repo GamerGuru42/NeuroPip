@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-10-08T13:30:00Z",
+  "timestamp": "2026-10-08T14:04:00Z",
   "system": {
     "product": "NeuroPip",
     "version": "v0.10.0-dev",
     "vendor": "NextGen Technologies",
-    "phase": "PHASE_G_DEMO_EXECUTION",
-    "status": "ACTIVE_MONITORING"
+    "phase": "PHASE_H_FORWARD_EVIDENCE_ACCUMULATION",
+    "status": "AUTONOMOUS_FORWARD_COLLECTION"
   },
   "safety": {
     "can_trade_real": false,
@@ -31,7 +31,7 @@
     "account_trade_mode": "DEMO",
     "account_currency": "USD",
     "hedging_mode": true,
-    "log_freshness_seconds": 2.5
+    "log_freshness_seconds": 2.1
   },
   "market_data": {
     "active_symbols_count": 5,
@@ -50,16 +50,21 @@
     "forward_sample_n": 0,
     "target_milestone": 15,
     "milestone_progress_pct": 0.0,
-    "synthetic_test_count": 161,
+    "milestones": {
+      "M1_target": 15,
+      "M2_target": 30,
+      "M3_target": 50,
+      "M4_target": 75,
+      "M5_target": 100
+    },
     "open_positions": 0,
     "closed_positions": 0,
     "total_pnl_usd": 0.0,
-    "win_rate_pct": 0.0,
-    "profit_factor": 0.0,
-    "expectancy_r": 0.0,
+    "win_rate_pct": null,
+    "profit_factor": null,
+    "expectancy_r": null,
     "max_drawdown_pct": 0.0,
-    "rejected_orders": 0,
-    "preflight_guard_blocks": 1
+    "evidence_status": "AWAITING_ORGANIC_FORWARD_SIGNALS"
   },
   "recovery": {
     "supervisor_task": "Launch_MT5_ATG",

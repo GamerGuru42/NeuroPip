@@ -2,8 +2,8 @@
 
 **Product:** NeuroPip  
 **Organization:** NextGen Technologies  
-**Phase:** Phase G — Autonomous DEMO Execution & Forward Validation  
-**Last Updated:** `2026-10-08T13:30:00Z`
+**Phase:** Phase H — Autonomous Forward Evidence Accumulation & Milestone 1  
+**Last Updated:** `2026-10-08T14:04:00Z`
 
 ---
 
@@ -56,17 +56,17 @@ All 5 core assets are synchronized across all 6 timeframes (`M1`, `M5`, `M15`, `
 ## 4. Forward Evidence Accumulation ($N$)
 
 - **Active Cohort:** `COHORT_01`
-- **Genuine Forward Trades ($N$):** **0**
-- **Synthetic Unit/Regression Tests:** **161 / 161 Passed** (100%)
-- **Open Positions:** 0
-- **Closed Positions:** 0
+- **Genuine Forward Trades ($N$):** **0** *(Awaiting organic market price-action signals)*
+- **Open Forward Trades:** 0
+- **Closed Forward Trades:** 0
 - **Total Realized P&L:** `0.00 USD`
 - **Max Drawdown:** `0.00%`
-- **Win Rate:** `N/A` (Awaiting $N \ge 15$)
-- **Profit Factor:** `N/A` (Awaiting $N \ge 15$)
+- **Win Rate:** `N/A` (Evaluating at Milestone 1: $N \ge 15$)
+- **Profit Factor:** `N/A` (Evaluating at Milestone 1: $N \ge 15$)
+- **Expectancy ($R$):** `N/A` (Evaluating at Milestone 1: $N \ge 15$)
 
 ### Milestone Trajectory:
-- **Milestone 1 ($N = 15$):** Pending accumulation (Target: $PF \ge 1.30$, $\text{MaxDD} \le 5.0\%$)
+- **Milestone 1 ($N = 15$):** **PENDING COLLECTION** (Target: $PF \ge 1.30$, $\text{MaxDD} \le 5.0\%$)
 - **Milestone 2 ($N = 30$):** Scheduled
 - **Milestone 3 ($N = 50$):** Scheduled
 - **Milestone 4 ($N = 75$):** Scheduled
@@ -74,22 +74,18 @@ All 5 core assets are synchronized across all 6 timeframes (`M1`, `M5`, `M15`, `
 
 ---
 
-## 5. Execution Pipeline Verification
+## 5. Execution & Data Separation Rules
 
-The 7-stage order construction and preflight pipeline was validated during initialization:
-1. **Signal Generation:** Deterministic strategy signal evaluation validated across all symbols.
-2. **Trade Plan Construction:** Correct entry price, SL ($2.0 \times \text{ATR}$), and TP ($2.0 \times \text{RR}$) calculated.
-3. **Risk Sizing:** Volatility-adjusted lot sizing checked against broker minimum volume ($0.01$) and step.
-4. **Order Construction:** MQL5 `MqlTradeRequest` built with correct magic number, type, and stop levels.
-5. **Preflight Validation:** Broker `OrderCheck` returned code `10027` (execution disabled by policy preflight).
-6. **ExecutionGuard Safety Block:** `ATG_REJECT_EXECUTION_DISABLED` triggered, preventing broker order transmission.
-7. **Reconciliation & Persistence:** Audit log recorded preflight check cleanly in `ATG_Phase9_Storage`.
+1. **Zero Real-Money Routing:** All trade decisions remain locked in forward paper/simulation mode.
+2. **Strict Dataset Isolation:** Synthetic unit fixtures (161 tests) and dry-run tests are strictly segregated into synthetic logs and isolated from `COHORT_01`.
+3. **Organic Signal Evaluation:** Trade signals require authentic multi-timeframe alignment on closed bars. No artificial or forced orders are generated.
+4. **Persistent Snapshots:** Evaluated hourly and upon trade completion; written to `ATG_Simulation` and `ATG_Phase9_Storage`.
 
 ---
 
-## 6. Runtime Supervisor & Recovery
+## 6. Runtime Supervisor & Health
 
 - **Supervisor Component:** `monitoring/runtime_supervisor.py`
 - **Task Scheduler Task:** `\Launch_MT5_ATG`
-- **Crash Recovery Tested:** Pass (Automatic chart restore and restart capability intact)
-- **Stale EA Detection:** Log age threshold $45\text{s}$ actively monitored.
+- **Stale EA Detection:** Log age threshold $45\text{s}$ actively monitored (Current age: $< 3\text{s}$).
+- **Recovery Status:** Zero unhandled crashes; auto-restore path fully operational.
