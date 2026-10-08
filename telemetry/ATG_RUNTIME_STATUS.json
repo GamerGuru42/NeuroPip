@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-08T14:04:00Z",
+  "timestamp": "2026-10-08T22:07:00Z",
   "system": {
     "product": "NeuroPip",
     "version": "v0.10.0-dev",
@@ -20,7 +20,7 @@
     "execution_guard_active": true
   },
   "runtime": {
-    "mt5_pid": 14664,
+    "mt5_pid": 14876,
     "terminal_exe": "C:\\Program Files\\MetaTrader 5 EXNESS\\terminal64.exe",
     "terminal_data_dir": "%APPDATA%\\MetaQuotes\\Terminal\\53785E099C927DB68A545C249CDBCE06",
     "expert_name": "NeuroPip_EA",

@@ -20,3 +20,7 @@
 [2026-10-08 14:02:00] [INVARIANTS] Verified frozen strategy invariants: FP-B741A5209E579706, can_trade=false, MONITOR_ONLY=true, RiskPercent=1.0%.
 [2026-10-08 14:03:00] [RUNTIME] Host terminal PID 14664 active. 5/5 symbols synchronized across M1-D1 with sub-5s heartbeats.
 [2026-10-08 14:04:00] [MONITOR] Continuous forward accumulation running autonomously toward Milestone 1 (N = 15).
+[2026-10-08 22:06:25] [SUPERVISOR] Process detachment detected after server restart. Autonomous recovery triggered.
+[2026-10-08 22:06:37] [RECOVERY] MT5 restored cleanly via Task Scheduler Launch_MT5_ATG to PID 14876 within 12s.
+[2026-10-08 22:06:42] [SYNC] All 5 symbols and timeframes (M1-D1) synchronized. Live bar evaluation active.
+[2026-10-08 22:07:00] [MONITOR] Forward state confirmed: N = 0 genuine forward trades. Cohort COHORT_01 active.
