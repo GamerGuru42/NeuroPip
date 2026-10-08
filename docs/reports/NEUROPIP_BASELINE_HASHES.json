@@ -1,0 +1,455 @@
+{
+  "product": "NeuroPip",
+  "vendor": "NextGen Technologies",
+  "version": "v0.10.0-dev",
+  "git_commit": "f49546f6771a2bb7c92adf36f1d167a46c7069b2",
+  "strategy_identifier": "NEUROPIP_TREND_CONTINUATION",
+  "fingerprint": "FP-B741A5209E579706",
+  "total_manifest_files": 74,
+  "files": {
+    ".github/workflows/ci.yml": {
+      "sha256": "41df80b629239e1a798455ad8c8935c7fdd11f10e992d287932612dfb12ef6d0",
+      "size_bytes": 2060,
+      "phase_c_baseline_sha256": "41df80b629239e1a798455ad8c8935c7fdd11f10e992d287932612dfb12ef6d0",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "VERSION": {
+      "sha256": "f4ae4d913dd4a1a93e1089353bc8de3fb6598fb70351ecb97fb0a9a8b005dcad",
+      "size_bytes": 12,
+      "phase_c_baseline_sha256": "f4ae4d913dd4a1a93e1089353bc8de3fb6598fb70351ecb97fb0a9a8b005dcad",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "config/README.md": {
+      "sha256": "43b77d8b6d460371456bb77ae133e89a91611b5be51363afa57ca174269b101d",
+      "size_bytes": 1189,
+      "phase_c_baseline_sha256": "43b77d8b6d460371456bb77ae133e89a91611b5be51363afa57ca174269b101d",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "config/runtime.example.json": {
+      "sha256": "471801d45b7a4fe1dc0c85685dce84c4108e249fc27654cc6660541c23eb1c66",
+      "size_bytes": 826,
+      "phase_c_baseline_sha256": "471801d45b7a4fe1dc0c85685dce84c4108e249fc27654cc6660541c23eb1c66",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "config/startup.ini.example": {
+      "sha256": "2b212bc25921117acec12beafb02b3f36e92681e327317a0b279f86f0a2fc735",
+      "size_bytes": 708,
+      "phase_c_baseline_sha256": "02105302c425e3cc19a9e375bb8975c4179baa4b2f61ebbde9e60362e280de07",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "monitoring/README.md": {
+      "sha256": "1037f162937911239f75370a02939cbe0ee0e84e61eac3baab9956e991628b9c",
+      "size_bytes": 1079,
+      "phase_c_baseline_sha256": "1037f162937911239f75370a02939cbe0ee0e84e61eac3baab9956e991628b9c",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "monitoring/run_live_monitor.py": {
+      "sha256": "04757bb49d81a05b98531cde5cfc5234d7d8562a203a6294ce4c88f21306ad77",
+      "size_bytes": 2345,
+      "phase_c_baseline_sha256": "b6f4447f656af03dca2e0c78b558a456705a52583f4a2a4d8d3514946f7b411f",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "monitoring/run_persistence_verification.py": {
+      "sha256": "69eae30bf90161ce03cf816450b42f1020d37002452bc6b06141ef02d48ca622",
+      "size_bytes": 2462,
+      "phase_c_baseline_sha256": "912b88ef426840f2dcae9a368e7a2bffce2ae78a3d952b5b231ad9126bfdf0e4",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "monitoring/runtime_supervisor.py": {
+      "sha256": "7af5e883f423e3600145c206db38f76657f901b739da908ab90709cd6912c1c2",
+      "size_bytes": 5582,
+      "phase_c_baseline_sha256": "45582de60550c9af3d6694f60a0dcf16c4122de7e1f337bb6cbee380b02f5148",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "monitoring/verify_runtime.py": {
+      "sha256": "f1b0071da2581a81a940b3767367959ea64af3b42c1cfe01c1fddb494f17ea6d",
+      "size_bytes": 2585,
+      "phase_c_baseline_sha256": "bc7a4bb2269a9e2bb323997c6eda34c98d6e4803e18ba5dada9ce9356ebecbeb",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Analytics/EvaluationTypes.mqh": {
+      "sha256": "40067f9f6d1e840beb4c4be70041309e1104a5e899a84740ef55fa56803bd7ae",
+      "size_bytes": 21142,
+      "phase_c_baseline_sha256": "2adb7f0b4381ab0bdd67b1c28066de43b49ea52ee7b2d361d9fdadb81d6fe21a",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Analytics/ForwardAlertManager.mqh": {
+      "sha256": "fa5369c4a059e9322ee0858c0030c5d8bce2b5a9115e6ffaec9b792077634fb4",
+      "size_bytes": 4390,
+      "phase_c_baseline_sha256": "233cf9f07b9131b51a59f393159e83a3a5d68113a5312a638e9882fb7a9d6718",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Analytics/ForwardEvidenceEngine.mqh": {
+      "sha256": "d88f710d506f0db7d8d1e5c5ea461dea9a3b00767b9232c389ae6aa86d7f7497",
+      "size_bytes": 46152,
+      "phase_c_baseline_sha256": "4ad39307de598ca2b8e02f34ca19a0015b40cbe08d6c0de4d2443a69b2c55a5a",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Analytics/ForwardEvidenceTypes.mqh": {
+      "sha256": "683ee48800e61cac3815fa9007b6d0b386c5af5733982bef68a8a72000a2a8ca",
+      "size_bytes": 34963,
+      "phase_c_baseline_sha256": "47fd6fcd569cf6111f6bfdc5079ae51f5fe39f7462e80f539c3471f553372dd5",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Analytics/StatisticalEvaluationEngine.mqh": {
+      "sha256": "a6b421781c2cb00c432b843f30998978d9ef8baaaae02d0860a166a83b40de72",
+      "size_bytes": 48443,
+      "phase_c_baseline_sha256": "0f60e11835ff975d52ee743ed2eb071ab2e55d67d24227f3aa67cf2591323749",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Config/Config.mqh": {
+      "sha256": "b3a31de6387c7d6505cf1fe809813372eeca4bb38d49886c393d1df8288b0855",
+      "size_bytes": 8487,
+      "phase_c_baseline_sha256": "6d031805375e86af27d71edcb3d8fa313adac1149a1ecccb3d0dcd0ee397f093",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Core/EventScheduler.mqh": {
+      "sha256": "49fb64a1afc63f91de32727dc2483146e4952d3c10d8f2a690aa1df887459431",
+      "size_bytes": 3109,
+      "phase_c_baseline_sha256": "4904cfa65538b36aa713f03401771655129051be6aa39bf6a0cb712c33068635",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Core/RuntimeState.mqh": {
+      "sha256": "d5a659be42ccfbbe35b8a0be682649ad3cce2126f4d8079f3d6e6faa97e8cc10",
+      "size_bytes": 963,
+      "phase_c_baseline_sha256": "d5a659be42ccfbbe35b8a0be682649ad3cce2126f4d8079f3d6e6faa97e8cc10",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "mt5/Experts/NeuroPip/Core/RuntimeValidator.mqh": {
+      "sha256": "91268a8b23d075d6fba25fead5a74bf94ea15fb44a4d0e72beebe764852bac0f",
+      "size_bytes": 2079,
+      "phase_c_baseline_sha256": "91268a8b23d075d6fba25fead5a74bf94ea15fb44a4d0e72beebe764852bac0f",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "mt5/Experts/NeuroPip/Diagnostics/DiagnosticsEngine.mqh": {
+      "sha256": "d3999ecf3ecc8acc907fb99836ae2f4a1c420dd1d2cc53cc51a44679ace56cdd",
+      "size_bytes": 4043,
+      "phase_c_baseline_sha256": "5a6a70b94728da1561410a8a9a67e2376a318a97fa5b3fd198e1eeb33ceb7042",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Diagnostics/Logger.mqh": {
+      "sha256": "f21eab97bfaa0d692a39ac13dfb4a0273b3af5493886d8959fb5c22a158a7095",
+      "size_bytes": 990,
+      "phase_c_baseline_sha256": "f21eab97bfaa0d692a39ac13dfb4a0273b3af5493886d8959fb5c22a158a7095",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "mt5/Experts/NeuroPip/Execution/ExecutionGuard.mqh": {
+      "sha256": "572ee1998927f5601cd51830bbc6b5a45d2b514bd7d62eae8079116357babb0e",
+      "size_bytes": 6707,
+      "phase_c_baseline_sha256": "27b38edf288a81f42cd8d3d492012b3611110b0a7449b6b35953f6137f00815c",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/ExecutionPipeline.mqh": {
+      "sha256": "fd9a46cfc90dcafb86f91baa3de95eef9c17bc598015273b9dfd5fd1fc5eea57",
+      "size_bytes": 7391,
+      "phase_c_baseline_sha256": "fbbb14483186a3a55095355a3c13cb089e07f8763f1f69829519154e38ed3127",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/ExecutionReconciliation.mqh": {
+      "sha256": "a5cce5b764cdf42b9c1975b25cdf6f577fbdec7375bf987f370e959b9dbdce59",
+      "size_bytes": 5289,
+      "phase_c_baseline_sha256": "1ea5517bdda979782e5ef4486a092b3e077a654a9cb73d7432fcb70d05cdfa97",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/ExecutionRequestBuilder.mqh": {
+      "sha256": "3e54800b024c07c32b006b6ed7e0a0f61afdf5e97043b6a712e87aafeeff00a4",
+      "size_bytes": 4315,
+      "phase_c_baseline_sha256": "03edbc9bc20d8f702bb3a70a2afd8e62d1c651535895007a33b7470274735f76",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/ExecutionTypes.mqh": {
+      "sha256": "a9f35708e2797e4914482ebaa44ea278cb8860329e17ce1ff78bc95918235ee1",
+      "size_bytes": 455,
+      "phase_c_baseline_sha256": "06386655abc766051d523307933095845aa6a64700744614051c3a6929465952",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/ExecutionValidator.mqh": {
+      "sha256": "d5c58048089726758fd764299a6a6053ff01bebfeaf5926003387dcb0ecf4784",
+      "size_bytes": 17223,
+      "phase_c_baseline_sha256": "c4d40abd3bf146eb7ed73315bf268c964ae2ad1a75c18edf31fa8865e1df2d8e",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/OrderCheckEngine.mqh": {
+      "sha256": "f9384809e308ec1556d7262c97d4ed3177086e912594adb602a4ea83943083d9",
+      "size_bytes": 13638,
+      "phase_c_baseline_sha256": "0527fdd52aef6b2566d872c03ca41919d9df5e08cb908158e2e575f68aeb2700",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/PositionSizer.mqh": {
+      "sha256": "282f334c9974bdb835c1d31831db268b1dadcc305fa46fea7db2e9e3db923c11",
+      "size_bytes": 5263,
+      "phase_c_baseline_sha256": "ab42798d5c596c66e3844a84c8f42d670d3c98f09fecef7dc88f502aa721ab9c",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/RiskEngine.mqh": {
+      "sha256": "9083ec54f439dcc81f5b04c81823bd61156fc6cba5f5948f37501a116da01863",
+      "size_bytes": 4016,
+      "phase_c_baseline_sha256": "bda3b796880aa45a6ebfa183d14b1df450a6e29bc2ccb74f462f323f8668b46b",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Execution/TradeTypes.mqh": {
+      "sha256": "9ab0b9b744766c68df7d835885ebbe649122909d7969a434acbbe44702d7fa0f",
+      "size_bytes": 7004,
+      "phase_c_baseline_sha256": "89a707e43e64270ffdd1ed841e4331b4ff15b2b94372b6a7028d0133f5098833",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Intelligence/MarketFeatureEngine.mqh": {
+      "sha256": "9bedb11151a61eeba87bce3f76dab4eb3da1aed38cf6e2028728457d44d4e742",
+      "size_bytes": 17869,
+      "phase_c_baseline_sha256": "542a49013d9ac45a6a8fd98829a90232954df0b7787a741aada1c2eda1cdc5e5",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Intelligence/MarketFeatureTypes.mqh": {
+      "sha256": "0560a59f8cb7a4a5464e4f8aa2cc5e64a3acfc0b112ec06ed074e3e9598ad91a",
+      "size_bytes": 9565,
+      "phase_c_baseline_sha256": "2bf44250d30ed001a1f53af3fd3f9db184f74b22b9665bb2f5eff6a6edb96bc8",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Intelligence/MarketIntelligenceEngine.mqh": {
+      "sha256": "26ade9c56590cb1ae806e36d9bdadfe2810531fcc077f2e42d54e08bde7ba60d",
+      "size_bytes": 11122,
+      "phase_c_baseline_sha256": "b38dd07684d94749eb0aa5a64e5e303e8fc25bf6956e8f44951f236bf1e4afea",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Intelligence/MarketRegimeEngine.mqh": {
+      "sha256": "59a5c03dfc1516ee00bcafdbe351161a769e1940563f05dcb6532f8dc38861a1",
+      "size_bytes": 8300,
+      "phase_c_baseline_sha256": "8571e1c60ea5d42d2f4879b82a2276f14e31b698b1b4fe2ed69560c24a25c053",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Intelligence/MarketRegimeTypes.mqh": {
+      "sha256": "2f1228384455282cbfe9462f50d4805b5843d3773feb42f42cc6df0af915c9a0",
+      "size_bytes": 7148,
+      "phase_c_baseline_sha256": "da12ba9d0116ab492a647f0d0bf3f4f579a27b15a07da6b08f2afa932c8efcf0",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Intelligence/SignalEngine.mqh": {
+      "sha256": "b13f5cecc37c40b70b5a2895e2fcf1b8e34c2cca5f78d841bfb102535b4c307f",
+      "size_bytes": 12523,
+      "phase_c_baseline_sha256": "609e9bcdd21c6abf1fa86cdb4d388a22fe70e327f359db0effb72d12cac0c37e",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Intelligence/SignalTypes.mqh": {
+      "sha256": "c79893063d04b690504fde5ca89c339dee4961b035b7b8fe0f1b6baff0e49ab4",
+      "size_bytes": 5523,
+      "phase_c_baseline_sha256": "2ed0a1e27c4778b352ec43f2d85f43d04aa0b9a5ae63d5dc81a250b2820d0ddd",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/MarketData/BarDataManager.mqh": {
+      "sha256": "87ca6539b908c6b181f4b710cc16e2b4ded5187c05855de561b01e2625c94799",
+      "size_bytes": 20854,
+      "phase_c_baseline_sha256": "e3755798cae1606a277b4cc7a84370fb3053990cdfd432a45034530eaaaeabb7",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/MarketData/MarketDataEngine.mqh": {
+      "sha256": "d3d2fae2a482f3cb109aa39481a324c5e8f6b64ea13cca7170c83908e55bc9a4",
+      "size_bytes": 12167,
+      "phase_c_baseline_sha256": "b215fba19bc331fdd9da889c49a7f61ac477847ca068496d43ceb8b31859a9a2",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/MarketData/MarketStateCache.mqh": {
+      "sha256": "2d4d9fe3f0c657ad4ee5f0d37ce5bbc1c56cfce29a3749f0944d67d0306eceb1",
+      "size_bytes": 911,
+      "phase_c_baseline_sha256": "2d4d9fe3f0c657ad4ee5f0d37ce5bbc1c56cfce29a3749f0944d67d0306eceb1",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "mt5/Experts/NeuroPip/MarketData/SymbolUniverseManager.mqh": {
+      "sha256": "4da40102e940adb8146c4fb90fb36fc711385b37c030d6a0a509f7ab2c5307b2",
+      "size_bytes": 12087,
+      "phase_c_baseline_sha256": "e474ede131214962b901064f8e79a0e3649b91491849748d93086abdedacb42c",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/NeuroPip_EA.mq5": {
+      "sha256": "c2deef0095fa400dcf33a28a25095767d981057dfbda842a7ec8ab376d1e6832",
+      "size_bytes": 43378,
+      "phase_c_baseline_sha256": "95fa2f6051db606da3811c98ca18b1c3e6ad3a41e9777ccb51dae3663048cfba",
+      "equivalence_classification": "RENAMED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Persistence/HistoricalAnalyticsEngine.mqh": {
+      "sha256": "7e400d8cabc9b813056eba4383d3332cdee327e98c148393655ad31b3698589a",
+      "size_bytes": 22782,
+      "phase_c_baseline_sha256": "dd60e33984a8f7ecced2c4897f0597f3ebf1563d36fa6ec11fe47e7df00bbdba",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Persistence/PaperTradeStorage.mqh": {
+      "sha256": "7b4fbd3b868ca794f5062c4623b2e6757e05ce3ac51465b3b9a645966001c1ec",
+      "size_bytes": 29988,
+      "phase_c_baseline_sha256": "9432f4a447461f61cef75fafad883268da989e647bd14ed250fdf36cb679894e",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Persistence/PersistenceTypes.mqh": {
+      "sha256": "29f34856430daea05f3690a7e882393d90cad1ca428ada9cf6926ea51b09371c",
+      "size_bytes": 9012,
+      "phase_c_baseline_sha256": "11229b133a255d7803c2661ab8e496c0af3e39e8f522b15221b26ba5b5ba48f6",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/README.md": {
+      "sha256": "4a61dce04cbe52ad222304e52895c16dd4b8562655a954ddb400d4b77735b9ff",
+      "size_bytes": 1698,
+      "phase_c_baseline_sha256": "4a61dce04cbe52ad222304e52895c16dd4b8562655a954ddb400d4b77735b9ff",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "mt5/Experts/NeuroPip/Security/Capabilities.mqh": {
+      "sha256": "774b27e317547e1ad42795ea6f145a42bbb2993ee1b37bc8ab207435fc861ec7",
+      "size_bytes": 313,
+      "phase_c_baseline_sha256": "774b27e317547e1ad42795ea6f145a42bbb2993ee1b37bc8ab207435fc861ec7",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "mt5/Experts/NeuroPip/Simulation/PaperTradeTypes.mqh": {
+      "sha256": "5e007baee23cc6dfb886211405d3dbf057cd4fc25e518e924c6cbacec392a1da",
+      "size_bytes": 15276,
+      "phase_c_baseline_sha256": "300f96a95cad247825644a7319a1d9b3956e372c1124d6e02c24c3bd3c85752f",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Simulation/PaperTradingEngine.mqh": {
+      "sha256": "686b3963e97df602f689b45955577e4e00259e77e6c4d93224bd6b3c18eb08b4",
+      "size_bytes": 27503,
+      "phase_c_baseline_sha256": "762485d0dd3383e9a38910ede1f8f0ea3e257394f79d131ff3b7197873e96496",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Simulation/PerformanceEngine.mqh": {
+      "sha256": "981b25beabf24da587f989ce14452403812f5af2f0c3591747611d6ab11b3493",
+      "size_bytes": 23222,
+      "phase_c_baseline_sha256": "17526d138c1cdd27688df1addc3475fb6e840c21e5f6a53a922594549ef7ded5",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Strategy/StrategyDecisionEngine.mqh": {
+      "sha256": "b0603c6140b2599fb5224760727c0e46f6b2f8604dcd9a9dba506956599b2c5d",
+      "size_bytes": 9645,
+      "phase_c_baseline_sha256": "97277f00629bb07665302f3e463391f171de963ec98322ed13fc8db14fcb93a5",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Strategy/StrategyTypes.mqh": {
+      "sha256": "6e5aa0cbea50245e67a9fdd6871b702062927b3642a603c856c23a27e67ac60c",
+      "size_bytes": 10445,
+      "phase_c_baseline_sha256": "0daefd8a44fe16464aa1c26a1dc05fb5421ac851cb4074058411755a444c1b11",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Strategy/StrategyValidator.mqh": {
+      "sha256": "bda7f962bcb171a55bb05c96244c9b0e7ceb7b4a65627d9d9e7efd7dd4e7273d",
+      "size_bytes": 14381,
+      "phase_c_baseline_sha256": "6a26f7a6ad2e79a16fd445544e3e8b3d758ab14fd3a902ad660a63994d39c40a",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Strategy/TradePlanTypes.mqh": {
+      "sha256": "0c97758212f3c8c9c37cb366d6c1047bc7ab1dfd0ba3bf37254a75009ecebe35",
+      "size_bytes": 16838,
+      "phase_c_baseline_sha256": "b681c028ac4293292546bebd31116b8875db70ee8de7dd4f5c65df2ed909031c",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Strategy/TradePlanner.mqh": {
+      "sha256": "1861ba4778ac741797f3578c642edab2eeb9f48fbdffcc5721e668bc8901aa02",
+      "size_bytes": 42262,
+      "phase_c_baseline_sha256": "3782320c2b700f462a094f61edc870a56fea4d0d3054dfaaac7eca274ca75680",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Strategy/TrendContinuationStrategy.mqh": {
+      "sha256": "79fa4563bb18db294660b4ed7b280055fe422bcf5035958781187a32d2ae1de4",
+      "size_bytes": 10990,
+      "phase_c_baseline_sha256": "257d220b7bebfca35344a1139c7a8e7db9e842c5a57d5a6999666fd21bb1ce0c",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/Phase10Tests.mqh": {
+      "sha256": "1ef7d0d4cb4aeaf2ec335515e9c9659439dd88c6015f33274aeaac692d7e738a",
+      "size_bytes": 33509,
+      "phase_c_baseline_sha256": "b03dcd9859da843fb94f924fcd7e6ed643ccaf87f473c6cef8922db191b1cc9f",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/Phase3Tests.mqh": {
+      "sha256": "7705f7825027fb117e086c40d9cfc24f4468a04b801fe1def2c305e2c62dd522",
+      "size_bytes": 11770,
+      "phase_c_baseline_sha256": "05da59b355959e9c90cf565eb1c308b1bd5924e20b5ec0ee79cc3c541e47b024",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/Phase4Tests.mqh": {
+      "sha256": "58826ad2a67bebd95fadf1ff18c626db9dd442c30cb9a45d32889e79042d6438",
+      "size_bytes": 17824,
+      "phase_c_baseline_sha256": "c06a9f11f7105fb1494ba2046c4b8b852a2f7ed75218485e2f2b21b6577d1e26",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/Phase5Tests.mqh": {
+      "sha256": "17abd9db0665e79ec85ff7c2ec39f6afbbbc938c0b2cf75939a8d0e24e531f2b",
+      "size_bytes": 26863,
+      "phase_c_baseline_sha256": "d3ce8c009e5cbf1561c09e30b123ad3986fd55f550b26df32ca918550df67c06",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/Phase6Tests.mqh": {
+      "sha256": "6b9b79a610a8e42a73fb3f9b58d833cafed3bc08b091cd1ad90d246350076c8f",
+      "size_bytes": 37890,
+      "phase_c_baseline_sha256": "31e291febd4a2e16f87fcfa18f611fb95bfe19abcc26963aadbb145b00693f97",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/Phase7Tests.mqh": {
+      "sha256": "4062f8d251efc1d5be61739e655d4fceaa9cc4f9bbc44e943629d838729d68d0",
+      "size_bytes": 32034,
+      "phase_c_baseline_sha256": "b4979a1a3ad1b5a48f932543d38a785eb5fc0e2bf19ce4409466c587319fd714",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/Phase8Tests.mqh": {
+      "sha256": "14975b92fc9fb1f48a875dc83e6b1abf1f1c2ba800c71a485e3955e025e60216",
+      "size_bytes": 31332,
+      "phase_c_baseline_sha256": "60d692b20eec3d1ee6990c46cc3148c569f5b769c206beaad7c570eaf3bfc2b7",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/Phase9Tests.mqh": {
+      "sha256": "a6750af5726ae48bf026cf3537aee8e9f6ab063151956c60c22a018b6e13f314",
+      "size_bytes": 29777,
+      "phase_c_baseline_sha256": "b2f302bdc7c835b73e56eb8206a5d4bcc030048e4280070e7796065c5db38e11",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/RunPhase10TestsScript.mq5": {
+      "sha256": "a20e2ebad55f06b38609ec66be37a1068c0df9280fd65aca18e0e2f8de5a34a3",
+      "size_bytes": 2816,
+      "phase_c_baseline_sha256": "1ed689c272003149af1de0e730021f01b24b9f085e2cac41c144ee505c9210e7",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/RunPhase6TestsScript.mq5": {
+      "sha256": "05877f0c13ddc534d830c580ad83447c6ab2cf43da8b8f522c3347bdccbb37e9",
+      "size_bytes": 1439,
+      "phase_c_baseline_sha256": "f9e7f53867eb9b621dc8e6ad665c12c9338ca5db615a913b9992eb785b300040",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/RunPhase7TestsScript.mq5": {
+      "sha256": "2e250672a436ed0b1aa4cf2f82bdcfa192e34df7dbdc884358871dc150947eee",
+      "size_bytes": 1616,
+      "phase_c_baseline_sha256": "faec72c74f6b0ddcce793dbb0d75367c6975511101ff5e9f46b30571715f5f5f",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/RunPhase8TestsScript.mq5": {
+      "sha256": "908ef66c835932e389f68c895d5472ac46f244d27a7d36d2b8e64d237f062a6c",
+      "size_bytes": 1865,
+      "phase_c_baseline_sha256": "903d41013091bc9e5f31da2a33b080a983d621863157e1ac80081bd4d313fc53",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/RunPhase9TestsScript.mq5": {
+      "sha256": "4f3db208c344ff1ea5f41d613557dc93fe06efa616c7af42b260ef578fd54b95",
+      "size_bytes": 2580,
+      "phase_c_baseline_sha256": "36c3120e1681271d39973986ea8501276ec03835d2e2cece51ffcd6234b92845",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "mt5/Experts/NeuroPip/Tests/TestRunner.mqh": {
+      "sha256": "22ec1f5551baf4a36b1600d2ad9b122cd422c7fe6d19d91e8967475ffbb99c7e",
+      "size_bytes": 925,
+      "phase_c_baseline_sha256": "22ec1f5551baf4a36b1600d2ad9b122cd422c7fe6d19d91e8967475ffbb99c7e",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "tests/README.md": {
+      "sha256": "eb2aa81a3245928d88cd831d6b53a5d2f3dc1a47a7a10c5b2ca105f4f3a52ae2",
+      "size_bytes": 1139,
+      "phase_c_baseline_sha256": "eb2aa81a3245928d88cd831d6b53a5d2f3dc1a47a7a10c5b2ca105f4f3a52ae2",
+      "equivalence_classification": "IDENTICAL"
+    },
+    "tests/execute_test_runner.py": {
+      "sha256": "bb4a0379b7717c5efc0eb602743abcddadece37f0dc10617802e7d5cf65da1d6",
+      "size_bytes": 2376,
+      "phase_c_baseline_sha256": "e666ec1e419e50b5bf989ff2eacedf428dec962a48809a6c5e9cdf7a5f450a77",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    },
+    "tests/run_persistence_suite.py": {
+      "sha256": "6cd04d2dce425b9f24bdd2d2c1e453122fa7925ae089c4b873a846dbb62f0b17",
+      "size_bytes": 7143,
+      "phase_c_baseline_sha256": "fd32668129b0a791f3b5584f837ce0b9cf910c3ae42d2f94dc5cd1e7eca25aed",
+      "equivalence_classification": "EXPECTED_IDENTITY_CHANGE"
+    }
+  }
+}
