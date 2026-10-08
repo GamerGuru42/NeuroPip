@@ -1,0 +1,106 @@
+# ==============================================================================
+# NeuroPip Official Repository - .gitignore
+# NextGen Technologies - Proprietary Trading Technology
+# ==============================================================================
+
+# MetaTrader 5 Compiled Binaries & Libraries
+*.ex5
+*.ex4
+*.dll
+*.so
+*.dylib
+*.lib
+*.obj
+
+# Local MT5 Logs & Runtime Diagnostics
+*.log
+Logs/
+MQL5/Logs/
+supervisor.log
+compile*.log
+build*.log
+bat_compile*.log
+terminal_compile*.log
+
+# MT5 Chart Profiles, Windows & Local Presets
+*.chr
+*.chr.bak
+*.set
+order.wnd
+Profiles/deleted/
+Profiles/Charts/Default/chart*.chr
+Profiles/Charts/Default/order.wnd
+
+# Local Simulation, Paper Trading & Persistent State
+Files/
+MQL5/Files/
+ATG_Simulation/
+NeuroPip_Simulation/
+*.dat
+*.csv.tmp
+*.sqlite
+*.db
+
+# Credentials, Secrets & Local Environment Configs
+.env
+.env.*
+*.credentials
+credentials.ini
+accounts.ini
+secrets.json
+startup.ini
+test_run.ini
+tester.ini
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Python Caches & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+env/
+
+# Temporary Archives & Backups
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bak
+*.tmp
+*.swp
+
+# OS & IDE Machine-Specific Artifacts
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

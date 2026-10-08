@@ -1,0 +1,14 @@
+; ==============================================================================
+; NeuroPip - MetaTrader 5 Startup Configuration Template (Example)
+; NextGen Technologies - Commercial Trading Technology
+; ==============================================================================
+; INSTRUCTIONS:
+; Copy this file to your local MetaTrader 5 terminal configuration directory as startup.ini.
+; Replace placeholder values with your terminal-specific configuration.
+; NOTE: Do NOT commit active configuration files or credentials to version control.
+; ==============================================================================
+
+[StartUp]
+Expert=NeuroPip\NeuroPip
+Symbol=BTCUSDm
+Period=M1

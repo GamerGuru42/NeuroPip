@@ -1,0 +1,37 @@
+{
+  "system": {
+    "product": "NeuroPip",
+    "version": "v0.10.0-dev",
+    "vendor": "NextGen Technologies",
+    "environment": "DEMO_FORWARD_VALIDATION",
+    "execution_mode": "MONITOR_ONLY"
+  },
+  "safety": {
+    "can_trade": false,
+    "monitor_only": true,
+    "strategy_fingerprint": "FP-B741A5209E579706",
+    "execution_guard_locked": true
+  },
+  "risk": {
+    "risk_percent": 1.0,
+    "max_drawdown_percent": 5.0,
+    "stop_loss_atr_multiplier": 2.0,
+    "take_profit_rr_multiplier": 2.0,
+    "min_reward_risk_ratio": 1.5
+  },
+  "universe": {
+    "symbols": [
+      "EURUSDm",
+      "USDJPYm",
+      "XAUUSDm",
+      "BTCUSDm",
+      "ETHUSDm"
+    ],
+    "primary_chart_timeframe": "M1"
+  },
+  "persistence": {
+    "store_type": "CSV_AUDIT",
+    "autosave_interval_seconds": 60,
+    "max_audit_records": 10000
+  }
+}

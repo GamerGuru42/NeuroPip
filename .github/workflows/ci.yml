@@ -1,0 +1,64 @@
+name: NeuroPip Repository Integrity & Hygiene
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  hygiene-check:
+    name: Repository Security & Hygiene Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify Binary Exclusion
+        run: |
+          echo "Checking that no compiled binary or library files are tracked..."
+          FORBIDDEN=$(find . -type f \( -name "*.ex5" -o -name "*.ex4" -o -name "*.dll" -o -name "*.so" -o -name "*.dylib" -o -name "*.zip" \) ! -path "*/.git/*")
+          if [ -n "$FORBIDDEN" ]; then
+            echo "ERROR: Tracked binary files detected:"
+            echo "$FORBIDDEN"
+            exit 1
+          fi
+          echo "PASS: Zero binary files tracked."
+
+      - name: Verify Secret & Credential Exclusion
+        run: |
+          echo "Scanning for accidental secrets or private keys..."
+          BAD_SECRETS=$(grep -rnE "(password|passwd|api_key|secret_key|BEGIN[[:space:]]+.*PRIVATE[[:space:]]+KEY)" . \
+            --exclude-dir=".git" \
+            --exclude="*.md" \
+            --exclude="ci.yml" || true)
+          if [ -n "$BAD_SECRETS" ]; then
+            echo "WARNING: Potential secret patterns detected:"
+            echo "$BAD_SECRETS"
+            exit 1
+          fi
+          echo "PASS: No credentials or secrets found."
+
+      - name: Validate JSON Schemas
+        run: |
+          python -c "
+          import json, glob
+          for f in glob.glob('config/*.json'):
+              with open(f) as fp:
+                  json.load(fp)
+                  print(f'Valid JSON: {f}')
+          "
+
+      - name: Verify Version Consistency
+        run: |
+          VERSION=$(cat VERSION | tr -d '\r\n')
+          echo "Repository Version: $VERSION"
+          if [ -z "$VERSION" ]; then
+            echo "ERROR: VERSION file is empty"
+            exit 1
+          fi
