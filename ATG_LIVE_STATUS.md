@@ -3,7 +3,7 @@
 **Product:** NeuroPip  
 **Organization:** NextGen Technologies  
 **Phase:** Phase H — Autonomous Forward Evidence Accumulation & Milestone 1  
-**Last Updated:** `2026-10-08T22:07:00Z`
+**Last Updated:** `2026-10-09T01:08:00Z`
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## 2. Terminal & Runtime State
 
-- **Active Process PID:** `14876` (`terminal64.exe`)
+- **Active Process PID:** `3936` (`terminal64.exe`)
 - **Attached Expert:** `NeuroPip_EA` (`MQL5\Experts\NeuroPip\NeuroPip_EA.mq5` compiled to `.ex5`)
 - **Host Chart:** `BTCUSDm`, Timeframe: `M1`
 - **Broker / Server:** `Exness-MT5Trial9`
