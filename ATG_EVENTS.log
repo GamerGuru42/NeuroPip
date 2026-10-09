@@ -26,3 +26,6 @@
 [2026-10-08 22:07:00] [MONITOR] Forward state confirmed: N = 0 genuine forward trades. Cohort COHORT_01 active.
 [2026-10-09 01:06:33] [SUPERVISOR] Detached MT5 recovered cleanly to PID 3936 within 12s.
 [2026-10-09 01:06:53] [MARKET] 2026-10-09 trading session synchronized. 5/5 symbols evaluating regimes. N = 0.
+[2026-10-09 08:49:40] [SUPERVISOR] Task Scheduler power setting updated to allow execution on battery mode.
+[2026-10-09 08:49:50] [RECOVERY] MT5 launched and attached successfully with PID 1412.
+[2026-10-09 08:50:04] [MARKET] 2026-10-09 European session synchronized. 5/5 symbols evaluating live regimes. N = 0.
