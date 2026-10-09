@@ -14,6 +14,7 @@
 #include "TradePlanTypes.mqh"
 #include "StrategyTypes.mqh"
 #include "StrategyDecisionEngine.mqh"
+#include "SpreadPolicy.mqh"
 #include "../Intelligence/MarketFeatureTypes.mqh"
 #include "../Intelligence/MarketIntelligenceEngine.mqh"
 #include "../Execution/RiskEngine.mqh"
@@ -388,16 +389,18 @@ public:
       out_plan.validation_flags |= PLAN_GATE_ENTRY_VALID;
 
       //--------------------------------------------------------------
-      // GATE 8: SPREAD_VALID (checked early before expensive sizing)
+      // GATE 8: SPREAD_VALID (Checked using Centralized Asset-Class SpreadPolicy)
       //--------------------------------------------------------------
       int spread_points = (int)MathRound((tick.ask - tick.bid) / point);
       out_plan.spread_at_planning = spread_points;
 
-      if(spread_points > m_config.max_spread_tolerance)
+      double atr_price_planning = mtf.tf_m15.volatility.atr;
+      if(atr_price_planning <= 0.0) atr_price_planning = mtf.tf_m15.volatility.atr_points * point;
+
+      string spread_gate_rej = "";
+      if(!CSpreadPolicy::ValidateSpread(decision.symbol, spread_points, point, atr_price_planning, 0.0, spread_gate_rej))
       {
-         RejectPlan(out_plan, PLAN_REJECT_SPREAD_EXCEEDED,
-            StringFormat("Current spread (%d pts) exceeds max tolerance (%d pts).",
-               spread_points, m_config.max_spread_tolerance));
+         RejectPlan(out_plan, PLAN_REJECT_SPREAD_EXCEEDED, spread_gate_rej);
          return false;
       }
       out_plan.validation_flags |= PLAN_GATE_SPREAD_VALID;

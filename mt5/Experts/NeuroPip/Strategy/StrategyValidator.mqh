@@ -8,6 +8,7 @@
 #define ATG_STRATEGY_VALIDATOR_MQH
 
 #include "StrategyTypes.mqh"
+#include "SpreadPolicy.mqh"
 #include "../Diagnostics/Logger.mqh"
 
 class CStrategyValidator
@@ -231,17 +232,22 @@ public:
       out_decision.AddEvidence(StringFormat("Volatility acceptable: M15 ATR %.1f pts (Ratio: %.2f).",
          mtf.tf_m15.volatility.atr_points, mtf.tf_m15.volatility.atr_ratio_to_avg));
 
-      // GATE 7: SPREAD_VALID
-      if(mtf.tf_m15.spread.spread_points > params.max_spread_points)
+      // GATE 7: SPREAD_VALID (Centralized Asset-Class & Relative ATR Policy)
+      double point_size = SymbolInfoDouble(mtf.symbol, SYMBOL_POINT);
+      if(point_size <= 0.0) point_size = 0.00001;
+      double atr_price = mtf.tf_m15.volatility.atr;
+      if(atr_price <= 0.0) atr_price = mtf.tf_m15.volatility.atr_points * point_size;
+
+      string spread_rej = "";
+      if(!CSpreadPolicy::ValidateSpread(mtf.symbol, mtf.tf_m15.spread.spread_points, point_size, atr_price, 0.0, spread_rej))
       {
          out_decision.rejection_reason = STRAT_REJECT_EXCESSIVE_SPREAD;
-         out_decision.rejection_detail = StringFormat("Gate 7 (SPREAD_VALID): Spread (%d pts) exceeds max allowed (%d pts).",
-            mtf.tf_m15.spread.spread_points, params.max_spread_points);
+         out_decision.rejection_detail = spread_rej;
          out_decision.AddConflict(out_decision.rejection_detail);
          return false;
       }
-      out_decision.AddEvidence(StringFormat("Spread acceptable: %d pts <= %d pts limit.",
-         mtf.tf_m15.spread.spread_points, params.max_spread_points));
+      out_decision.AddEvidence(StringFormat("Spread acceptable: %d pts complies with asset-specific and relative cost policy for %s.",
+         mtf.tf_m15.spread.spread_points, mtf.symbol));
 
       // GATE 8: CONFLICT_CHECK
       // Check for conflicts recorded in candidate

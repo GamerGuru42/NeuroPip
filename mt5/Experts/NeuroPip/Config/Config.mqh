@@ -178,7 +178,7 @@ public:
       // Phase 6 Paper Trading & Simulation parameters
       // ------------------------------------------------------------
       paper_trading_enabled  = true;
-      initial_paper_equity   = 10.00; // Small-account simulation ($10.00 forward paper equity)
+      initial_paper_equity   = 1000.00; // Track B Configurable Paper Equity ($1,000.00 realistic retail test balance)
       min_performance_sample = 30;
       same_bar_policy        = "CONSERVATIVE_SL";
       simulation_cost_model  = "ZERO_COST_DEMO";
@@ -204,9 +204,9 @@ public:
       // Phase 9 Forward Paper Validation & Evidence Collection parameters
       // ------------------------------------------------------------
       forward_validation_enabled       = true;
-      active_cohort_id                 = "COHORT_01";
+      active_cohort_id                 = "COHORT_EXP_01"; // Track B Experimental Cohort
       forward_evidence_target          = 50;
       forward_evidence_extended_target = 100;
-      enforce_config_freeze            = true;
+      enforce_config_freeze            = false;
    }
 };

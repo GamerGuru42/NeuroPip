@@ -104,6 +104,21 @@ public:
          return false;
       }
 
+      // Sizing Feasibility Check: calculate monetary risk at minimum permitted broker volume
+      double min_volume_monetary_risk = vol_min * loss_per_lot;
+      if(min_volume_monetary_risk > risk_money)
+      {
+         double required_equity = (risk_result.risk_percent > 0.0)
+            ? (min_volume_monetary_risk / (risk_result.risk_percent / 100.0))
+            : 0.0;
+         size_result.raw_volume = risk_money / loss_per_lot;
+         size_result.normalized_volume = 0.0;
+         size_result.reason = StringFormat(
+            "SIZING_FEASIBILITY_FAILED: Min permitted volume (%.4f) incurs $%.2f risk, exceeding risk budget $%.2f (%.2f%% of $%.2f equity). Min required equity is $%.2f.",
+            vol_min, min_volume_monetary_risk, risk_money, risk_result.risk_percent, risk_result.equity, required_equity);
+         return false;
+      }
+
       size_result.raw_volume = risk_money / loss_per_lot;
       size_result.normalized_volume = NormalizeVolume(size_result.raw_volume, vol_min, vol_max, vol_step);
 
