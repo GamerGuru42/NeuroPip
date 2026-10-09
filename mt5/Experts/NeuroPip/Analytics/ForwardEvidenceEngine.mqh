@@ -85,7 +85,7 @@ public:
       m_snapshot.snapshot_id             = cohort_id + "_SNAP";
       m_snapshot.ea_version              = cfg.ea_version;
       m_snapshot.config_version          = cfg.config_version;
-      m_snapshot.strategy_id             = "NEUROPIP_TREND_CONTINUATION";
+      m_snapshot.strategy_id             = (cfg.active_strategy_id != "") ? cfg.active_strategy_id : "NEUROPIP_TREND_CONTINUATION";
       m_snapshot.risk_percent            = cfg.risk_percent;
       m_snapshot.min_reward_risk         = cfg.min_reward_risk;
       m_snapshot.sl_atr_multiplier       = cfg.sl_atr_multiplier;

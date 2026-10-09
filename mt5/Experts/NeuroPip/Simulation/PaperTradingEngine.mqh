@@ -174,7 +174,7 @@ public:
         m_evidence(evidence),
         m_enabled(true),
         m_same_bar_policy("CONSERVATIVE_SL"),
-        m_max_holding_sec(7200),
+        m_max_holding_sec(86400),
         m_trade_counter(6000000)
    {
       ArrayResize(m_active_trades, 0);

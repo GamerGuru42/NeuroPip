@@ -280,7 +280,7 @@ public:
       out_plan.strategy_version     = decision.strategy_version;
       out_plan.source_decision_id   = decision.decision_id;
       out_plan.strategy_decision_id = decision.decision_id;
-      out_plan.primary_timeframe    = PERIOD_M15;
+      out_plan.primary_timeframe    = decision.primary_timeframe;
       out_plan.creation_time        = TimeCurrent();
       out_plan.created_time         = out_plan.creation_time;
       out_plan.source_bar_time      = decision.bar_time;
@@ -394,8 +394,13 @@ public:
       int spread_points = (int)MathRound((tick.ask - tick.bid) / point);
       out_plan.spread_at_planning = spread_points;
 
-      double atr_price_planning = mtf.tf_m15.volatility.atr;
-      if(atr_price_planning <= 0.0) atr_price_planning = mtf.tf_m15.volatility.atr_points * point;
+      double atr_price_planning = (decision.primary_timeframe == PERIOD_H1)
+                                  ? mtf.tf_h1.volatility.atr
+                                  : mtf.tf_m15.volatility.atr;
+      if(atr_price_planning <= 0.0)
+         atr_price_planning = (decision.primary_timeframe == PERIOD_H1)
+                              ? mtf.tf_h1.volatility.atr_points * point
+                              : mtf.tf_m15.volatility.atr_points * point;
 
       string spread_gate_rej = "";
       if(!CSpreadPolicy::ValidateSpread(decision.symbol, spread_points, point, atr_price_planning, 0.0, spread_gate_rej))
@@ -443,11 +448,15 @@ public:
       //--------------------------------------------------------------
       // GATE 5: SL_VALID
       //--------------------------------------------------------------
-      double atr_points = mtf.tf_m15.volatility.atr_points;
+      double atr_points = (decision.primary_timeframe == PERIOD_H1)
+                          ? mtf.tf_h1.volatility.atr_points
+                          : mtf.tf_m15.volatility.atr_points;
       if(atr_points <= 0.0)
       {
-         // Fallback to H1 ATR
-         atr_points = mtf.tf_h1.volatility.atr_points;
+         // Fallback
+         atr_points = (decision.primary_timeframe == PERIOD_H1)
+                      ? mtf.tf_m15.volatility.atr_points
+                      : mtf.tf_h1.volatility.atr_points;
          if(atr_points <= 0.0)
          {
             RejectPlan(out_plan, PLAN_REJECT_INVALID_STOP, "ATR volatility data is missing or zero.");
@@ -464,7 +473,9 @@ public:
          out_plan.levels.sl_method = StringFormat("ATR_%.1fX", m_config.sl_atr_multiplier);
 
          // Validate against swing low structure
-         double swing_low = mtf.tf_m15.structure.recent_swing_low;
+         double swing_low = (decision.primary_timeframe == PERIOD_H1)
+                            ? mtf.tf_h1.structure.recent_swing_low
+                            : mtf.tf_m15.structure.recent_swing_low;
          if(swing_low > 0.0 && swing_low < out_plan.entry_price)
          {
             out_plan.invalidation_price = swing_low;
@@ -491,7 +502,9 @@ public:
          out_plan.levels.sl_method = StringFormat("ATR_%.1fX", m_config.sl_atr_multiplier);
 
          // Validate against swing high structure
-         double swing_high = mtf.tf_m15.structure.recent_swing_high;
+         double swing_high = (decision.primary_timeframe == PERIOD_H1)
+                             ? mtf.tf_h1.structure.recent_swing_high
+                             : mtf.tf_m15.structure.recent_swing_high;
          if(swing_high > 0.0 && swing_high > out_plan.entry_price)
          {
             out_plan.invalidation_price = swing_high;

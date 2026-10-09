@@ -1415,6 +1415,9 @@ int OnInit()
       return INIT_FAILED;
    }
 
+   // Configure active strategy and timeframe
+   g_strategy_engine.SetActiveStrategy(g_config.active_strategy_id, g_config.strategy_tf);
+
    // Run initial strategy evaluation across universe
    g_strategy_engine.EvaluateAll(true);
 

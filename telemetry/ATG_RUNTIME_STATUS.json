@@ -1,37 +1,44 @@
 {
-  "timestamp": "2026-10-09T11:51:00Z",
+  "timestamp": "2026-10-09T19:05:00Z",
   "system": {
     "product": "NeuroPip",
     "version": "v0.10.0-dev",
     "vendor": "NextGen Technologies",
-    "phase": "PHASE_H_FORWARD_EVIDENCE_ACCUMULATION",
-    "status": "AUTONOMOUS_FORWARD_COLLECTION"
+    "phase": "PHASE_J_DUAL_TRACK_FORWARD_PAPER_VALIDATION",
+    "status": "DUAL_TRACK_COLLECTION_ACTIVE"
   },
-  "safety": {
+  "track_a_baseline": {
+    "status": "RUNNING",
+    "branch": "main",
+    "mt5_pid": 21304,
+    "terminal_dir": "%APPDATA%\\MetaQuotes\\Terminal\\53785E099C927DB68A545C249CDBCE06",
+    "strategy_id": "NEUROPIP_TREND_CONTINUATION",
+    "cohort_id": "COHORT_01",
+    "strategy_fingerprint": "FP-B741A5209E579706",
+    "timeframe": "PERIOD_M15",
+    "simulated_equity": 10.00,
+    "forward_sample_n": 0,
+    "open_positions": 0,
     "can_trade_real": false,
     "monitor_only": true,
-    "strategy_fingerprint": "FP-B741A5209E579706",
-    "risk_percent": 1.0,
-    "sl_atr_multiplier": 2.0,
-    "tp_rr_multiplier": 2.0,
-    "min_risk_reward": 1.5,
-    "max_spread_qualification_pts": 35,
-    "max_spread_tolerance_pts": 40,
     "execution_guard_active": true
   },
-  "runtime": {
-    "mt5_pid": 1412,
-    "terminal_exe": "C:\\Program Files\\MetaTrader 5 EXNESS\\terminal64.exe",
-    "terminal_data_dir": "%APPDATA%\\MetaQuotes\\Terminal\\53785E099C927DB68A545C249CDBCE06",
-    "expert_name": "NeuroPip_EA",
-    "chart_symbol": "BTCUSDm",
-    "chart_period": "M1",
-    "account_server": "Exness-MT5Trial9",
-    "account_number": 477430016,
-    "account_trade_mode": "DEMO",
-    "account_currency": "USD",
-    "hedging_mode": true,
-    "log_freshness_seconds": 2.1
+  "track_b_experimental": {
+    "status": "RUNNING",
+    "branch": "feat/strategy-alternatives",
+    "mt5_pid": 13248,
+    "terminal_dir": "C:\\Users\\biduo\\MT5_TrackB",
+    "strategy_id": "NEUROPIP_MOMENTUM_BREAKOUT",
+    "cohort_id": "COHORT_EXP_01",
+    "strategy_fingerprint": "FP-B99C07129CE43DE8",
+    "timeframe": "PERIOD_H1",
+    "simulated_equity": 1000.00,
+    "tp_rr_multiplier": 2.50,
+    "forward_sample_n": 0,
+    "open_positions": 0,
+    "can_trade_real": false,
+    "monitor_only": true,
+    "execution_guard_active": true
   },
   "market_data": {
     "active_symbols_count": 5,
@@ -44,32 +51,5 @@
       "BTCUSDm": { "status": "READY", "spread_pts": 640, "timeframes_synced": ["M1", "M5", "M15", "H1", "H4", "D1"] },
       "ETHUSDm": { "status": "READY", "spread_pts": 100, "timeframes_synced": ["M1", "M5", "M15", "H1", "H4", "D1"] }
     }
-  },
-  "forward_evidence": {
-    "cohort_id": "COHORT_01",
-    "forward_sample_n": 0,
-    "target_milestone": 15,
-    "milestone_progress_pct": 0.0,
-    "milestones": {
-      "M1_target": 15,
-      "M2_target": 30,
-      "M3_target": 50,
-      "M4_target": 75,
-      "M5_target": 100
-    },
-    "open_positions": 0,
-    "closed_positions": 0,
-    "total_pnl_usd": 0.0,
-    "win_rate_pct": null,
-    "profit_factor": null,
-    "expectancy_r": null,
-    "max_drawdown_pct": 0.0,
-    "evidence_status": "AWAITING_ORGANIC_FORWARD_SIGNALS"
-  },
-  "recovery": {
-    "supervisor_task": "Launch_MT5_ATG",
-    "supervisor_active": true,
-    "unhandled_crashes": 0,
-    "recovery_events_count": 0
   }
 }

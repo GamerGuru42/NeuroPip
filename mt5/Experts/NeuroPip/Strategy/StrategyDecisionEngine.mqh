@@ -10,6 +10,7 @@
 
 #include "StrategyTypes.mqh"
 #include "TrendContinuationStrategy.mqh"
+#include "MomentumBreakoutStrategy.mqh"
 #include "../Intelligence/MarketIntelligenceEngine.mqh"
 #include "../MarketData/SymbolUniverseManager.mqh"
 #include "../Diagnostics/Logger.mqh"
@@ -31,6 +32,9 @@ private:
    CSymbolUniverseManager*     m_universe;
 
    CTrendContinuationStrategy  m_trend_strategy;
+   CMomentumBreakoutStrategy   m_breakout_strategy;
+   string                      m_active_strategy_id;
+   ENUM_TIMEFRAMES             m_strategy_tf;
 
    SSymbolStrategyState        m_states[];
    ulong                       m_decision_counter;
@@ -76,12 +80,24 @@ public:
         m_intelligence(intelligence),
         m_universe(universe),
         m_trend_strategy(logger),
+        m_breakout_strategy(logger),
+        m_active_strategy_id("NEUROPIP_TREND_CONTINUATION"),
+        m_strategy_tf(PERIOD_M15),
         m_decision_counter(4000000)
    {
    }
 
+   void SetActiveStrategy(const string strategy_id, ENUM_TIMEFRAMES tf)
+   {
+      m_active_strategy_id = strategy_id;
+      m_strategy_tf = tf;
+   }
+   string GetActiveStrategyId() const { return m_active_strategy_id; }
+   ENUM_TIMEFRAMES GetStrategyTimeframe() const { return m_strategy_tf; }
+
    // Strategy accessors
    CTrendContinuationStrategy* GetTrendStrategy() { return &m_trend_strategy; }
+   CMomentumBreakoutStrategy*  GetBreakoutStrategy() { return &m_breakout_strategy; }
 
    //+----------------------------------------------------------------+
    //| Initialize engine for universe                                 |
@@ -143,8 +159,8 @@ public:
          return false;
       }
 
-      // 2. Duplicate Signal Suppression (check M15 bar timestamp)
-      datetime current_bar_time = mtf.tf_m15.bar_time;
+      // 2. Duplicate Signal Suppression (check completed bar timestamp based on active timeframe)
+      datetime current_bar_time = (m_strategy_tf == PERIOD_H1) ? mtf.tf_h1.bar_time : mtf.tf_m15.bar_time;
       if(!force_eval && current_bar_time > 0 && current_bar_time == m_states[slot].last_evaluated_bar_time)
       {
          // Same bar already evaluated: suppress duplicate processing
@@ -155,9 +171,17 @@ public:
       m_decision_counter++;
       ulong dec_id = m_decision_counter;
 
-      // 3. Evaluate Strategy
+      // 3. Evaluate Active Strategy
       SStrategyDecision decision;
-      bool is_approved = m_trend_strategy.Evaluate(mtf, regime, signal, dec_id, decision);
+      bool is_approved = false;
+      if(m_active_strategy_id == "NEUROPIP_MOMENTUM_BREAKOUT")
+      {
+         is_approved = m_breakout_strategy.Evaluate(mtf, regime, signal, dec_id, decision);
+      }
+      else
+      {
+         is_approved = m_trend_strategy.Evaluate(mtf, regime, signal, dec_id, decision);
+      }
 
       m_states[slot].latest_decision         = decision;
       m_states[slot].last_evaluated_bar_time = current_bar_time;

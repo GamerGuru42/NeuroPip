@@ -193,7 +193,7 @@ struct SForwardConfigSnapshot
       snapshot_id             = cohort_id + "_SNAP";
       ea_version              = cfg.ea_version;
       config_version          = cfg.config_version;
-      strategy_id             = "NEUROPIP_TREND_CONTINUATION";
+      strategy_id             = (cfg.active_strategy_id != "") ? cfg.active_strategy_id : "NEUROPIP_TREND_CONTINUATION";
       risk_percent            = cfg.risk_percent;
       min_reward_risk         = cfg.min_reward_risk;
       sl_atr_multiplier       = cfg.sl_atr_multiplier;
@@ -218,11 +218,12 @@ struct SForwardConfigSnapshot
       return true;
    }
 
-      string BuildFingerprint()
+   string BuildFingerprint()
    {
+      string strat_key = (strategy_id == "NEUROPIP_MOMENTUM_BREAKOUT") ? "NEUROPIP_MOMENTUM_BREAKOUT" : "ATG_TREND_CONTINUATION";
       // Deterministic frozen specification fingerprint (FP-B741A5209E579706)
       string raw = StringFormat("ATG|EA:%s|CFG:%s|STRAT:%s|R:%.2f|RR:%.2f|SL:%.2f|TP:%.2f|CONF:%.2f|CONF_MIN:%.2f|TFS:%s|SPD:%d",
-         ea_version, config_version, "ATG_TREND_CONTINUATION", risk_percent, min_reward_risk,
+         ea_version, config_version, strat_key, risk_percent, min_reward_risk,
          sl_atr_multiplier, tp_rr_multiplier, confidence_threshold, confluence_threshold,
          timeframe_hierarchy, spread_threshold_points);
 

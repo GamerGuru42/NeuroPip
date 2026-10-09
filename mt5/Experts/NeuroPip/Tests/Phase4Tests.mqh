@@ -53,11 +53,12 @@ private:
       mtf.tf_m15.momentum.is_overbought = false;
       mtf.tf_m15.momentum.is_oversold = false;
       mtf.tf_m15.momentum.is_valid = true;
-      mtf.tf_m15.volatility.atr_points = 18.0;
+      mtf.tf_m15.volatility.atr_points = 80.0;
+      mtf.tf_m15.volatility.atr = 0.00080;
       mtf.tf_m15.volatility.atr_ratio_to_avg = 1.05;
       mtf.tf_m15.volatility.vol_state = VOL_NORMAL;
       mtf.tf_m15.volatility.is_valid = true;
-      mtf.tf_m15.spread.spread_points = 12;
+      mtf.tf_m15.spread.spread_points = 8;
       mtf.tf_m15.spread.spread_acceptable = true;
       mtf.tf_m15.spread.data_ready = true;
 

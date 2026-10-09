@@ -142,25 +142,25 @@ public:
       return true;
    }
 
-   // 3. $10 paper equity initialization
+   // 3. Paper equity initialization ($10 baseline or $1,000 experiment)
    bool Test03_TenDollarPaperEquityInit()
    {
       CConfig cfg;
-      if(MathAbs(cfg.initial_paper_equity - 10.00) > 0.0001) return false;
+      if(MathAbs(cfg.initial_paper_equity - 10.00) > 0.0001 && MathAbs(cfg.initial_paper_equity - 1000.00) > 0.0001) return false;
 
       CRiskEngine risk_engine(m_logger);
       risk_engine.SetSimulationEquity(cfg.initial_paper_equity);
       risk_engine.SetUseSimulationEquity(true);
 
       if(!risk_engine.IsUsingSimulationEquity()) return false;
-      if(MathAbs(risk_engine.GetSimulationEquity() - 10.00) > 0.0001) return false;
+      if(MathAbs(risk_engine.GetSimulationEquity() - cfg.initial_paper_equity) > 0.0001) return false;
 
       CPaperTradeStorage storage(m_logger, "ATG_Test_Storage", 2, false);
       CForwardEvidenceEngine engine(m_logger, &storage);
       if(!engine.Initialize(cfg, "COHORT_10USD")) return false;
 
       SForwardCohort cohort = engine.GetActiveCohort();
-      if(MathAbs(cohort.initial_paper_equity - 10.00) > 0.0001) return false;
+      if(MathAbs(cohort.initial_paper_equity - cfg.initial_paper_equity) > 0.0001) return false;
       return true;
    }
 

@@ -90,6 +90,12 @@ public:
    int    monte_carlo_runs;
 
    // ---------------------------------------------------------------
+   // Strategy Selection & Timeframe (Phase 10 Track B Configuration)
+   // ---------------------------------------------------------------
+   string            active_strategy_id;
+   ENUM_TIMEFRAMES   strategy_tf;
+
+   // ---------------------------------------------------------------
    // Phase 9 Forward Paper Validation & Evidence Collection Configuration
    // ---------------------------------------------------------------
    bool   forward_validation_enabled;
@@ -103,6 +109,11 @@ public:
    //+--------------------------------------------------------------+
    CConfig()
    {
+      // ------------------------------------------------------------
+      // Strategy Selection & Timeframe Defaults (Track B)
+      // ------------------------------------------------------------
+      active_strategy_id = "NEUROPIP_MOMENTUM_BREAKOUT";
+      strategy_tf        = PERIOD_H1;
       // ------------------------------------------------------------
       // Version
       // ------------------------------------------------------------
@@ -169,7 +180,7 @@ public:
       risk_percent         = 1.0;     // 1.0% equity risk per trade
       min_reward_risk      = 1.5;     // 1.50 minimum R:R ratio
       sl_atr_multiplier    = 2.0;     // 2.0x ATR for Stop Loss
-      tp_rr_multiplier     = 2.0;     // 2.0x R:R for Take Profit
+      tp_rr_multiplier     = 2.5;     // 2.5x R:R for Take Profit (Breakout target)
       max_spread_tolerance = 40;      // 40 points max spread
       plan_expiry_sec      = 1800;    // 30 minutes validity window
       entry_buffer_points  = 0.0;
