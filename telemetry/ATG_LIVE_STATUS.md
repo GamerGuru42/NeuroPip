@@ -2,8 +2,8 @@
 
 **Product:** NeuroPip  
 **Organization:** NextGen Technologies  
-**Phase:** Phase J — Isolated Track B Launch & Baseline Verification  
-**Last Updated:** `2026-10-09T19:05:00Z`
+**Phase:** Phase K — Runtime Integrity, Paper-Trade Lifecycle & Evidence Audit  
+**Last Updated:** `2026-10-09T19:20:00Z`
 
 ---
 

@@ -1,0 +1,66 @@
+{
+  "ledger_version": "1.0.0",
+  "audit_timestamp": "2026-10-09T19:20:00Z",
+  "safety_invariants": {
+    "can_trade_real": false,
+    "monitor_only": true,
+    "execution_guard_locked": true,
+    "real_money_routing": "DISABLED"
+  },
+  "track_a_baseline": {
+    "status": "RUNNING",
+    "branch": "main",
+    "git_commit": "4e6c5c9f401aefa8eb68bebcd2dae0a06d7559a4",
+    "mt5_pid": 21304,
+    "binary_path": "C:\\Program Files\\MetaTrader 5 EXNESS\\terminal64.exe",
+    "data_directory": "%APPDATA%\\MetaQuotes\\Terminal\\53785E099C927DB68A545C249CDBCE06",
+    "ea_binary_sha256": "a4dcef8776cbd269f89de1197a0e3a8ed76c69dd60d1fd8063b68461ebd61793",
+    "strategy_id": "NEUROPIP_TREND_CONTINUATION",
+    "cohort_id": "COHORT_01",
+    "strategy_fingerprint": "FP-B741A5209E579706",
+    "timeframe": "PERIOD_M15",
+    "simulated_equity": 10.00,
+    "forward_trades_count_n": 0,
+    "open_positions": [],
+    "closed_trades": []
+  },
+  "track_b_experimental": {
+    "status": "RUNNING",
+    "branch": "feat/strategy-alternatives",
+    "git_commit": "b840dfd4bfffbd3cdc5f91a920c29b1b9484dbcf",
+    "mt5_pid": 13248,
+    "binary_path": "C:\\Users\\biduo\\MT5_TrackB\\terminal64.exe",
+    "data_directory": "C:\\Users\\biduo\\MT5_TrackB",
+    "ea_binary_sha256": "88df38d7fc7e4e5f005e3a5fd035ed9e8b3a5ccac7c12d13cfa8860359839fe0",
+    "ea_compile_timestamp": "2026-10-09T18:56:30Z",
+    "compiler_result": "0 errors, 0 warnings",
+    "strategy_id": "NEUROPIP_MOMENTUM_BREAKOUT",
+    "cohort_id": "COHORT_EXP_01",
+    "strategy_fingerprint": "FP-B99C07129CE43DE8",
+    "timeframe": "PERIOD_H1",
+    "simulated_equity": 1000.00,
+    "risk_percent": 1.0,
+    "sl_atr_multiplier": 2.0,
+    "tp_rr_multiplier": 2.5,
+    "forward_trades_count_n": 0,
+    "open_positions": [],
+    "closed_trades": [],
+    "candidate_evaluations": {
+      "last_completed_bar_time": "2026-10-09T18:00:00Z",
+      "evaluated_symbols_count": 5,
+      "setups_triggered": 0,
+      "rejection_reasons": {
+        "EURUSDm": "Structure is CONSOLIDATION inside Donchian 20; RSI (60.3) within neutral zone; no breakout.",
+        "USDJPYm": "Range within 20-period swing channels; ATR expansion < 1.25x.",
+        "XAUUSDm": "Range within 20-period swing channels; ATR expansion < 1.25x.",
+        "BTCUSDm": "Range within 20-period swing channels; ATR expansion < 1.25x.",
+        "ETHUSDm": "Range within 20-period swing channels; ATR expansion < 1.25x."
+      }
+    }
+  },
+  "dataset_isolation": {
+    "historical_backtest_dataset": "EXCLUDED",
+    "synthetic_unit_test_dataset": "EXCLUDED",
+    "forward_paper_dataset": "ISOLATED_AND_COLLECTING"
+  }
+}

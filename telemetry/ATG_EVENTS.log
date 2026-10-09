@@ -30,3 +30,11 @@
 [2026-10-09 08:49:50] [RECOVERY] MT5 launched and attached successfully with PID 1412.
 [2026-10-09 08:50:04] [MARKET] 2026-10-09 European session synchronized. 5/5 symbols evaluating live regimes. N = 0.
 [2026-10-09 11:51:00] [AUDIT] Midday market evaluation: 5/5 symbols in ranging/consolidation. Zero false positive trades triggered. Confluence criteria strictly enforced.
+[2026-10-09 18:43:00] [PHASE_J] Launching isolated Track B paper validation runtime (COHORT_EXP_01) in portable MT5 environment.
+[2026-10-09 18:56:30] [BUILD] MetaEditor compilation of Track B NeuroPip_EA.mq5: 0 errors, 0 warnings (13670 ms). Binary SHA256: 88df38d7fc7e4e5f005e3a5fd035ed9e8b3a5ccac7c12d13cfa8860359839fe0.
+[2026-10-09 18:56:59] [INIT] Track B initialized successfully: PID 13248, Cohort COHORT_EXP_01, Fingerprint FP-B99C07129CE43DE8, Equity $1,000.00, Strategy NEUROPIP_MOMENTUM_BREAKOUT (H1).
+[2026-10-09 19:00:00] [MARKET] 18:00 H1 completed bar evaluated across EURUSDm, USDJPYm, XAUUSDm, BTCUSDm, ETHUSDm. Structure: CONSOLIDATION / RANGING. 0 setups triggered. N = 0.
+[2026-10-09 19:20:00] [PHASE_K] Phase K runtime integrity and paper-trade lifecycle audit initiated.
+[2026-10-09 19:21:00] [ISOLATION] Process isolation confirmed: Track A (PID 21304, COHORT_01, FP-B741A5209E579706) and Track B (PID 13248, COHORT_EXP_01, FP-B99C07129CE43DE8) running concurrently with zero interference.
+[2026-10-09 19:22:00] [SAFETY] Real-money trading verified disabled across both instances: can_trade=false, MONITOR_ONLY=true, ExecutionGuard permanently locked.
+
