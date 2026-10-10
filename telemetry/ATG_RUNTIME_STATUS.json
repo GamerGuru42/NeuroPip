@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-10-09T19:20:00Z",
+  "timestamp": "2026-10-10T23:15:00Z",
   "system": {
     "product": "NeuroPip",
     "version": "v0.10.0-dev",
     "vendor": "NextGen Technologies",
-    "phase": "PHASE_K_RUNTIME_INTEGRITY_AUDIT",
-    "status": "DUAL_TRACK_COLLECTION_ACTIVE"
+    "phase": "PHASE_L_FORWARD_EVIDENCE_ACCUMULATION",
+    "status": "AUTONOMOUS_DUAL_TRACK_FORWARD_MONITORING"
   },
   "track_a_baseline": {
     "status": "RUNNING",
     "branch": "main",
-    "mt5_pid": 21304,
+    "mt5_pid": 13564,
     "terminal_dir": "%APPDATA%\\MetaQuotes\\Terminal\\53785E099C927DB68A545C249CDBCE06",
     "strategy_id": "NEUROPIP_TREND_CONTINUATION",
     "cohort_id": "COHORT_01",
@@ -19,6 +19,10 @@
     "simulated_equity": 10.00,
     "forward_sample_n": 0,
     "open_positions": 0,
+    "closed_positions": 0,
+    "cumulative_pnl_usd": 0.00,
+    "max_drawdown_pct": 0.00,
+    "last_heartbeat": "2026-10-10T23:14:30Z",
     "can_trade_real": false,
     "monitor_only": true,
     "execution_guard_active": true
@@ -26,7 +30,7 @@
   "track_b_experimental": {
     "status": "RUNNING",
     "branch": "feat/strategy-alternatives",
-    "mt5_pid": 13248,
+    "mt5_pid": 11672,
     "terminal_dir": "C:\\Users\\biduo\\MT5_TrackB",
     "strategy_id": "NEUROPIP_MOMENTUM_BREAKOUT",
     "cohort_id": "COHORT_EXP_01",
@@ -36,6 +40,12 @@
     "tp_rr_multiplier": 2.50,
     "forward_sample_n": 0,
     "open_positions": 0,
+    "closed_positions": 0,
+    "cumulative_pnl_usd": 0.00,
+    "profit_factor": null,
+    "max_drawdown_pct": 0.00,
+    "last_completed_h1_bar": "2026-10-10T22:00:00Z",
+    "last_heartbeat": "2026-10-10T23:14:30Z",
     "can_trade_real": false,
     "monitor_only": true,
     "execution_guard_active": true
@@ -45,11 +55,11 @@
     "symbols_healthy_count": 5,
     "health_status": "5/5 symbols healthy",
     "symbols": {
-      "EURUSDm": { "status": "READY", "spread_pts": 8, "timeframes_synced": ["M1", "M5", "M15", "H1", "H4", "D1"] },
-      "USDJPYm": { "status": "READY", "spread_pts": 10, "timeframes_synced": ["M1", "M5", "M15", "H1", "H4", "D1"] },
-      "XAUUSDm": { "status": "READY", "spread_pts": 240, "timeframes_synced": ["M1", "M5", "M15", "H1", "H4", "D1"] },
-      "BTCUSDm": { "status": "READY", "spread_pts": 640, "timeframes_synced": ["M1", "M5", "M15", "H1", "H4", "D1"] },
-      "ETHUSDm": { "status": "READY", "spread_pts": 100, "timeframes_synced": ["M1", "M5", "M15", "H1", "H4", "D1"] }
+      "EURUSDm": { "status": "READY", "spread_pts": 8, "session": "WEEKEND_CLOSED", "last_tick": "2026-10-09T20:58:55Z" },
+      "USDJPYm": { "status": "READY", "spread_pts": 26, "session": "WEEKEND_CLOSED", "last_tick": "2026-10-09T20:58:57Z" },
+      "XAUUSDm": { "status": "READY", "spread_pts": 260, "session": "WEEKEND_CLOSED", "last_tick": "2026-10-09T20:57:59Z" },
+      "BTCUSDm": { "status": "READY", "spread_pts": 640, "session": "LIVE_TRADING_24_7", "last_tick": "2026-10-10T23:14:14Z" },
+      "ETHUSDm": { "status": "READY", "spread_pts": 100, "session": "LIVE_TRADING_24_7", "last_tick": "2026-10-10T23:14:13Z" }
     }
   }
 }

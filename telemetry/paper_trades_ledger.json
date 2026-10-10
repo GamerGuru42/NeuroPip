@@ -1,6 +1,6 @@
 {
   "ledger_version": "1.0.0",
-  "audit_timestamp": "2026-10-09T19:20:00Z",
+  "audit_timestamp": "2026-10-10T23:15:00Z",
   "safety_invariants": {
     "can_trade_real": false,
     "monitor_only": true,
@@ -11,7 +11,7 @@
     "status": "RUNNING",
     "branch": "main",
     "git_commit": "4e6c5c9f401aefa8eb68bebcd2dae0a06d7559a4",
-    "mt5_pid": 21304,
+    "mt5_pid": 13564,
     "binary_path": "C:\\Program Files\\MetaTrader 5 EXNESS\\terminal64.exe",
     "data_directory": "%APPDATA%\\MetaQuotes\\Terminal\\53785E099C927DB68A545C249CDBCE06",
     "ea_binary_sha256": "a4dcef8776cbd269f89de1197a0e3a8ed76c69dd60d1fd8063b68461ebd61793",
@@ -27,8 +27,8 @@
   "track_b_experimental": {
     "status": "RUNNING",
     "branch": "feat/strategy-alternatives",
-    "git_commit": "b840dfd4bfffbd3cdc5f91a920c29b1b9484dbcf",
-    "mt5_pid": 13248,
+    "git_commit": "00b46d65f573ad73b9846b07dfb9c6f2ec9ad7e5",
+    "mt5_pid": 11672,
     "binary_path": "C:\\Users\\biduo\\MT5_TrackB\\terminal64.exe",
     "data_directory": "C:\\Users\\biduo\\MT5_TrackB",
     "ea_binary_sha256": "88df38d7fc7e4e5f005e3a5fd035ed9e8b3a5ccac7c12d13cfa8860359839fe0",
@@ -46,15 +46,15 @@
     "open_positions": [],
     "closed_trades": [],
     "candidate_evaluations": {
-      "last_completed_bar_time": "2026-10-09T18:00:00Z",
+      "last_completed_bar_time": "2026-10-10T22:00:00Z",
       "evaluated_symbols_count": 5,
       "setups_triggered": 0,
       "rejection_reasons": {
-        "EURUSDm": "Structure is CONSOLIDATION inside Donchian 20; RSI (60.3) within neutral zone; no breakout.",
-        "USDJPYm": "Range within 20-period swing channels; ATR expansion < 1.25x.",
-        "XAUUSDm": "Range within 20-period swing channels; ATR expansion < 1.25x.",
-        "BTCUSDm": "Range within 20-period swing channels; ATR expansion < 1.25x.",
-        "ETHUSDm": "Range within 20-period swing channels; ATR expansion < 1.25x."
+        "EURUSDm": "Weekend closed. Range within 20-period swing channels; RSI neutral (51.2).",
+        "USDJPYm": "Weekend closed. Range within 20-period swing channels; RSI neutral (49.8).",
+        "XAUUSDm": "Weekend closed. Range within 20-period swing channels; RSI neutral (53.1).",
+        "BTCUSDm": "Live trading. Range within 20-period swing channels ([81800, 83600]); ATR expansion < 1.25x; RSI neutral (52.4).",
+        "ETHUSDm": "Live trading. Range within 20-period swing channels ([2460, 2530]); ATR expansion < 1.25x; RSI neutral (48.9)."
       }
     }
   },
